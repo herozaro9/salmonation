@@ -1,0 +1,68 @@
+.step {
+    display: flex;
+    display: -ms-flexbox;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    list-style: none;
+    margin: 0.2rem 0;
+    width: 100%;
+}
+
+.step .step-item {
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
+    margin-top: 0;
+    min-height: 1rem;
+    position: relative;
+    text-align: center;
+    padding-top:10px;
+}
+
+.step .step-item:not(:first-child)::before {
+    background: #159FF3;
+    content: "";
+    height: 2px;
+    left: -50%;
+    position: absolute;
+    top: 7px;
+    width: 100%;
+}
+
+.step .step-item a {
+    color: #159FF3;
+    display: contents;
+    padding: 20px 10px 0;
+    text-decoration: none;
+}
+
+.step .step-item a::before {
+    background: #159FF3;
+    border: 0.1rem solid #fff;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 0.6rem;
+    left: 50%;
+    position: absolute;
+    top: 0.2rem;
+    transform: translateX(-50%);
+    width: 0.6rem;
+    z-index: 1;
+}
+
+.step .step-item.active a::before {
+    background: #fff;
+    border: 0.1rem solid #159FF3;
+}
+
+.step .step-item.active~.step-item::before {
+    background: #dadee4;
+}
+
+.step .step-item.active~.step-item a {
+    color: #bcc3ce;
+}
+
+.step .step-item.active~.step-item a::before {
+    background: #dadee4;
+}
