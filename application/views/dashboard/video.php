@@ -5,7 +5,7 @@
       <div class="card-body">
         <div class="media align-items-center">
           <div class="media-body right-chart-content">
-            <h4><?php echo number_format($total[0]['total'],0,",","."); ?><span class="new-box">Blog</span></h4><span>Total Blog</span>
+            <h4><?php echo number_format($totalvideo[0]['total'],0,",","."); ?><span class="new-box">Video</span></h4><span>Total Video</span>
           </div>
         </div>
       </div>
@@ -16,7 +16,7 @@
       <div class="card-body">
         <div class="media align-items-center">
           <div class="media-body right-chart-content">
-            <h4><?php echo number_format($aktif[0]['total'],0,",","."); ?><span class="new-box">Blog</span></h4><span>Blog Active</span>
+            <h4><?php echo number_format($aktif[0]['total'],0,",","."); ?><span class="new-box">Video</span></h4><span>Video Active</span>
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@
       <div class="card-body">
         <div class="media align-items-center">
           <div class="media-body right-chart-content">
-            <h4><?php echo number_format($nonaktif[0]['total'],0,",","."); ?><span class="new-box">Blog</span></h4><span>Blog Not Active</span>
+            <h4><?php echo number_format($nonaktif[0]['total'],0,",","."); ?><span class="new-box">Video</span></h4><span>Video Not Active</span>
           </div>
         </div>
       </div>
@@ -42,10 +42,10 @@
         <div class="col-xl-3 earning-content p-0">
           <div class="row m-0 chart-left pb-0">
             <div class="col-xl-12 p-0 left_side_earning">
-              <h5>Blog</h5>
-              <p class="font-roboto">Overview data blog</p>
+              <h5>Videos</h5>
+              <p class="font-roboto">Overview data video</p>
             </div>
-            <div class="col-xl-12 p-0 left-btn a-right-bgt"><button type="button" class="btn btn-gradient a2-right-bgt" data-bs-toggle="modal" data-bs-target="#myModalnew">Add Blog</button></div>
+            <div class="col-xl-12 p-0 left-btn a-right-bgt"><button type="button" class="btn btn-gradient a2-right-bgt" data-bs-toggle="modal" data-bs-target="#myModalnew">Add Video</button></div>
           </div>
         </div>
         <div class="col-lg-12 pb-3 pt-3">
@@ -53,23 +53,21 @@
             <thead>
               <tr>
                 <th>Title</th>
+                <th class="text-center">Link</th>
                 <th class="text-center">Status</th>
-                <th class="text-center">Author</th>
-                <th class="text-center">Publish</th>
                 <th class="text-center">Action</th>
               </tr>
             </thead>
             <tbody>
               <?php if(!empty($all)){
-                foreach ($all as $datablog) { ?>
+                foreach ($all as $dataall) { ?>
                   <tr>
-                    <td><?php echo $datablog['title']; ?><br><a href="<?php echo base_url(); ?>news/d/<?php echo $datablog['slug']; ?>" target="_blank" class="text-primary"><i class="fa fa-share"></i>Url</a></td>
-                    <td class="text-center"><?php if($datablog['status'] == 'Tidak Aktif'){echo '<span class="badge badge-danger">Not Active</span>';}else{echo '<span class="badge badge-success">Active</span>';} ?></td>
-                    <td class="text-center"><?php echo $datablog['author']; ?></td>
-                    <td class="text-center"><?php echo date('d F Y', strtotime($datablog['publish'])); ?></td>
+                    <td><?php echo $dataall['title']; ?></td>
+                    <td class="text-center"><a href="<?php echo $dataall['link']; ?>" target="_blank" class="btn btn-primary">Link Video</a></td>
+                    <td class="text-center"><?php if($dataall['status'] == 'Tidak Aktif'){echo '<span class="badge badge-danger">Non Active</span>';}else{echo '<span class="badge badge-success">Active</span>';} ?></td>
                     <td class="d-flex pb-5 text-center">
-                      <button type="button" class="btn btn-warning" onclick="findBlog('<?php echo $datablog["news_id"]; ?>')"><i class="fa fa-edit"></i></button>&nbsp;
-                      <button type="button" class="btn btn-danger" onclick="deleteBlog('<?php echo $datablog["news_id"]; ?>', '<?php echo $datablog["file"]; ?>')"><i class="fa fa-times"></i></button>
+                      <button type="button" class="btn btn-warning" onclick="findvideo('<?php echo $dataall["video_id"]; ?>')"><i class="fa fa-edit"></i></button>&nbsp;
+                      <button type="button" class="btn btn-danger" onclick="deletevideo('<?php echo $dataall["video_id"]; ?>')"><i class="fa fa-times"></i></button>
                     </td>
                   </tr>
                 <?php } } ?>
@@ -83,25 +81,31 @@
 
   <!-- The Modal -->
   <div class="modal fade" id="myModalnew">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <form id="addblog">
+        <form id="addvideo">
           <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title">Add Blog</h4>
+            <h4 class="modal-title">Add Video</h4>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" data-bs-original-title="" title=""></button>
           </div>
 
           <!-- Modal body -->
           <div class="modal-body">
             <div class="row">
-              <div class="col-lg-6 mb-2">
+              <div class="col-lg-12 mb-2">
                 <div class="form-group">
                   <label>Title</label>
-                  <input type="text" name="titleadd" placeholder="Inset Title Blog" required="" class="form-control">
+                  <input type="text" name="titleadd" placeholder="Insert Title" required="" class="form-control">
                 </div>
               </div>
-              <div class="col-lg-6 mb-2">
+              <div class="col-lg-12 mb-2">
+                <div class="form-group">
+                  <label>Link</label>
+                  <input type="mail" name="linkadd" placeholder="https://youtube.com/" required="" class="form-control">
+                </div>
+              </div>
+              <div class="col-lg-12 mb-2">
                 <div class="form-group">
                   <label>Status</label>
                   <select class="form-control" required="" name="statusadd">
@@ -110,19 +114,10 @@
                   </select>
                 </div>
               </div>
-              <div class="col-lg-12 mb-2">
-                <div class="form-group">
-                  <label>Image Blog</label>
-                  <input type="file" name="imageadd" required="" class="form-control image-file" accept="image/png, image/gif, image/jpeg">
-                </div>
-              </div>
               <div class="col-lg-12">
                 <div class="form-group">
-                  <label>Content</label>
-                  <textarea name="contentadd" id="contentadd" rows="10" cols="80" required="">Insert Content Blog</textarea>
-                  <script>
-                    CKEDITOR.replace( 'contentadd' );
-                  </script>
+                  <label>Description</label>
+                  <textarea class="form-control" name="descriptionadd" id="descriptionadd" rows="10" cols="80" required="">Insert Description</textarea>
                 </div>
               </div>
             </div>
@@ -140,33 +135,32 @@
 
   <!-- The Modal -->
   <div class="modal fade" id="myModaledit">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <form id="editblog">
+        <form id="editvideo">
           <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title" id="titlemodal"></h4>
+            <h4 class="modal-title">Edit Video</h4>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" data-bs-original-title="" title=""></button>
           </div>
 
           <!-- Modal body -->
           <div class="modal-body">
             <div class="row justify-content-center">
-              <div class="col-lg-6 col-md-7 col-sm-8 col-12">
-                <img src="#" class="img-fluid" id="imgmodal">
-              </div>
-            </div>
-            <br>
-            <div class="row justify-content-center">
-              <input type="hidden" name="news_idedit" value="" id="news_id">
-              <input type="hidden" name="hgambaredit" value="" id="hgambaredit">
-              <div class="col-lg-6 mb-2">
+              <input type="hidden" name="video_idedit" value="" id="video_idedit">
+              <div class="col-lg-12 mb-2">
                 <div class="form-group">
                   <label>Title</label>
-                  <input type="text" name="titleedit" placeholder="Inset Title Blog" required="" class="form-control">
+                  <input type="text" name="titleedit" placeholder="Insert Title" required="" class="form-control">
                 </div>
               </div>
-              <div class="col-lg-6 mb-2">
+              <div class="col-lg-12 mb-2">
+                <div class="form-group">
+                  <label>Link</label>
+                  <input type="mail" name="linkedit" placeholder="https://youtube.com/" required="" class="form-control">
+                </div>
+              </div>
+              <div class="col-lg-12 mb-2">
                 <div class="form-group">
                   <label>Status</label>
                   <select class="form-control" required="" name="statusedit">
@@ -175,19 +169,10 @@
                   </select>
                 </div>
               </div>
-              <div class="col-lg-12 mb-2">
-                <div class="form-group">
-                  <label>Image Blog</label>
-                  <input type="file" name="imageedit" class="form-control image-file" accept="image/png, image/gif, image/jpeg">
-                </div>
-              </div>
               <div class="col-lg-12">
                 <div class="form-group">
-                  <label>Content</label>
-                  <textarea name="contentedit" id="contentedit" rows="10" cols="80" required=""></textarea>
-                  <script>
-                    CKEDITOR.replace( 'contentedit' );
-                  </script>
+                  <label>Description</label>
+                  <textarea class="form-control" name="descriptionedit" id="descriptionedit" rows="10" cols="80" required="">Insert Description</textarea>
                 </div>
               </div>
             </div>
@@ -205,18 +190,18 @@
 
   <script type="text/javascript">
     $("document").ready(function(){
-      $("#addblog").submit(function(e){
+      $("#addvideo").submit(function(e){
         e.preventDefault();
         var form = new FormData();
-        form.append('file', $('input[name="imageadd"]')[0].files[0]);
         form.append('title', $('input[name="titleadd"]').val());
-        form.append('description', CKEDITOR.instances.contentadd.getData());
+        form.append('link', $('input[name="linkadd"]').val());
+        form.append('description', $('textarea[name="descriptionadd"]').val());
         form.append('status', $('select[name="statusadd"]').val());
         form.append('<?php echo $csrf_name;?>', '<?php echo $csrf_hash;?>');
 
         $("#loading").show();
         $.ajax({
-          url: '<?php echo base_url(); ?>form/addblog',
+          url: '<?php echo base_url(); ?>form/addvideo',
           data: form,
           contentType: false,
           processData: false,
@@ -227,7 +212,7 @@
             var result = JSON.parse(response);
             if (result == "ok") {
               $("#loading").hide();
-              swal("Gotcha!", "News Added Succesfully!", "success");
+              swal("Gotcha!", "Video Added Succesfully!", "success");
               setTimeout(function(){ location.reload(); }, 1000);
             }else{
               $("#loading").hide();
@@ -237,23 +222,19 @@
         });
       });
 
-      $("#editblog").submit(function(e){
+      $("#editvideo").submit(function(e){
         e.preventDefault();
         var form = new FormData();
-        form.append('news_id', $('input[name="news_idedit"]').val());
+        form.append('video_id', $('input[name="video_idedit"]').val());
         form.append('title', $('input[name="titleedit"]').val());
-        form.append('description', CKEDITOR.instances.contentedit.getData());
-        form.append('status', $('select[name="statusedit"]').val());
+        form.append('link', $('input[name="linkedit"]').val());
+        form.append('description', $('textarea[name="descriptionedit"]').val());
         form.append('status', $('select[name="statusedit"]').val());
         form.append('<?php echo $csrf_name;?>', '<?php echo $csrf_hash;?>');
-        if ($('input[name="imageedit"]').val() != "") {
-          form.append('file', $('input[name="imageedit"]')[0].files[0]);
-          form.append('hgambar', $('input[name="hgambaredit"]').val());
-        }
         
         $("#loading").show();
         $.ajax({
-          url: '<?php echo base_url(); ?>form/editblog',
+          url: '<?php echo base_url(); ?>form/editvideo',
           data: form,
           contentType: false,
           processData: false,
@@ -264,7 +245,7 @@
             var result = JSON.parse(response);
             if (result == "ok") {
               $("#loading").hide();
-              swal("Gotcha!", "News Updated Succesfully!", "success");
+              swal("Gotcha!", "Video Updated Succesfully!", "success");
               setTimeout(function(){ location.reload(); }, 1000);
             }else{
               $("#loading").hide();
@@ -275,26 +256,20 @@
       });
     })
 
-    function findBlog(blog_id){
+    function findvideo(video_id){
       $.ajax({
-        url: '<?php echo base_url(); ?>form/findblog',
-        data: {news_id : blog_id, <?php echo $csrf_name;?>: '<?php echo $csrf_hash;?>'},
+        url: '<?php echo base_url(); ?>form/findvideo',
+        data: {video_id : video_id, <?php echo $csrf_name;?>: '<?php echo $csrf_hash;?>'},
         type: 'POST',
         datatype: "JSON",
         success: function (response) {
           if (response != "fail") {
             var hasil = JSON.parse(response);
-            $('#titlemodal').text(hasil[0].title);
             $('input[name="titleedit"]').val(hasil[0].title);
-            $('input[name="hgambaredit"]').val(hasil[0].file);
-            $('input[name="news_idedit"]').val(hasil[0].news_id);
-            if(hasil[0].status == 'Aktif'){
-              $('select[name="statusedit"]').val('Aktif').trigger('change');
-            }else{
-              $('select[name="statusedit"]').val('Tidak Aktif').trigger('change');
-            }
-            $('#imgmodal').attr('src', '<?php echo base_url(); ?>upload/news/' + hasil[0].file);
-            CKEDITOR.instances.contentedit.setData(hasil[0].description);
+            $('input[name="linkedit"]').val(hasil[0].link);
+            $('textarea[name="descriptionedit"]').val(hasil[0].description);
+            $('select[name="statusedit"]').val(hasil[0].status).trigger('change');
+            $('input[name="video_idedit"]').val(hasil[0].video_id);
             $("#myModaledit").modal("show");
           }else{
             swal("Oops!", "Data not found!", "error");
@@ -303,7 +278,7 @@
       });
     }
 
-    function deleteBlog(blog_id, image){
+    function deletevideo(video_id, image){
         swal({
           title: "Are you sure want to delete this data?",
           text: "If data deleted you cannot be recovered!!",
@@ -315,15 +290,15 @@
           if (willDelete) {
             $("#loading").show();
             $.ajax({
-              url: '<?php echo base_url() ?>form/deleteblog',
-              data: {blog_id : blog_id, image : image, <?php echo $csrf_name;?>: '<?php echo $csrf_hash;?>'},
+              url: '<?php echo base_url() ?>form/deletevideo',
+              data: {video_id : video_id, image : image, <?php echo $csrf_name;?>: '<?php echo $csrf_hash;?>'},
               type: 'POST',
               datatype: "JSON",
               success: function (response) {
                 var hasil = JSON.parse(response);
                 if (hasil == "ok") {
                   $("#loading").hide();
-                  swal("Gotcha!", "News Deleted Succesfully!", "success");
+                  swal("Gotcha!", "Video Deleted Succesfully!", "success");
                   setTimeout(function(){ location.reload(); }, 1000);
                 }else{
                   $("#loading").hide();

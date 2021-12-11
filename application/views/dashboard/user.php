@@ -133,7 +133,7 @@
                   </select>
                 </div>
               </div>
-              <div class="col-lg-6 mb-2">
+              <div class="col-lg-6">
                 <div class="form-group">
                   <label>Role</label>
                   <select class="form-control" required="" name="roleadd">
@@ -198,7 +198,7 @@
                   </select>
                 </div>
               </div>
-              <div class="col-lg-6 mb-2">
+              <div class="col-lg-6">
                 <div class="form-group">
                   <label>Role</label>
                   <select class="form-control" required="" name="roleedit">
@@ -230,6 +230,7 @@
         form.append('password', $('input[name="passwordadd"]').val());
         form.append('role', $('select[name="roleadd"]').val());
         form.append('status', $('select[name="statusadd"]').val());
+        form.append('<?php echo $csrf_name;?>', '<?php echo $csrf_hash;?>');
 
         $("#loading").show();
         $.ajax({
@@ -263,6 +264,7 @@
         form.append('role', $('select[name="roleedit"]').val());
         form.append('status', $('select[name="statusedit"]').val());
         form.append('password', $('input[name="passwordedit"]').val());
+        form.append('<?php echo $csrf_name;?>', '<?php echo $csrf_hash;?>');
         
         $("#loading").show();
         $.ajax({
@@ -291,7 +293,7 @@
     function finduser(user_id){
       $.ajax({
         url: '<?php echo base_url(); ?>form/finduser',
-        data: {user_id : user_id},
+        data: {user_id : user_id, <?php echo $csrf_name;?>: '<?php echo $csrf_hash;?>'},
         type: 'POST',
         datatype: "JSON",
         success: function (response) {
@@ -323,7 +325,7 @@
             $("#loading").show();
             $.ajax({
               url: '<?php echo base_url() ?>form/deleteuser',
-              data: {user_id : user_id, image : image},
+              data: {user_id : user_id, image : image, <?php echo $csrf_name;?>: '<?php echo $csrf_hash;?>'},
               type: 'POST',
               datatype: "JSON",
               success: function (response) {

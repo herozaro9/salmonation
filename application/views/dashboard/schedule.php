@@ -245,6 +245,7 @@
         form.append('time_first', $('input[name="time_firstadd"]').val());
         form.append('time_end', $('input[name="time_endadd"]').val());
         form.append('link', $('input[name="linkadd"]').val());
+        form.append('<?php echo $csrf_name;?>', '<?php echo $csrf_hash;?>');
 
         $("#loading").show();
         $.ajax({
@@ -279,6 +280,7 @@
         form.append('time_first', $('input[name="time_firstedit"]').val());
         form.append('time_end', $('input[name="time_endedit"]').val());
         form.append('link', $('input[name="linkedit"]').val());
+        form.append('<?php echo $csrf_name;?>', '<?php echo $csrf_hash;?>');
         if ($('input[name="imageedit"]').val() != "") {
           form.append('file', $('input[name="imageedit"]')[0].files[0]);
           form.append('hgambar', $('input[name="hgambaredit"]').val());
@@ -311,7 +313,7 @@
     function findSchedule(schedule_id){
       $.ajax({
         url: '<?php echo base_url(); ?>form/findschedule',
-        data: {schedule_id : schedule_id},
+        data: {schedule_id : schedule_id, <?php echo $csrf_name;?>: '<?php echo $csrf_hash;?>'},
         type: 'POST',
         datatype: "JSON",
         success: function (response) {
@@ -348,7 +350,7 @@
             $("#loading").show();
             $.ajax({
               url: '<?php echo base_url() ?>form/deleteschedule',
-              data: {schedule_id : schedule_id, image : image},
+              data: {schedule_id : schedule_id, image : image, <?php echo $csrf_name;?>: '<?php echo $csrf_hash;?>'},
               type: 'POST',
               datatype: "JSON",
               success: function (response) {

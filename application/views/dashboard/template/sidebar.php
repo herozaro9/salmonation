@@ -20,11 +20,12 @@
               </div>
             </li>
             <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav <?php if($this->uri->segment(1) == 'administrator' && $this->uri->segment(2) == 'news'){echo 'active-nav';} ?>" href="<?php echo base_url(); ?>administrator/news"><i data-feather="file"> </i><span>News</span></a></li>
-            <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav <?php if($this->uri->segment(1) == 'administrator' && $this->uri->segment(2) == 'registration'){echo 'active-nav';} ?>" href="<?php echo base_url(); ?>administrator/registration"><i data-feather="user"> </i><span>Registration</span></a></li>
-            <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav <?php if($this->uri->segment(1) == 'administrator' && $this->uri->segment(2) == 'team'){echo 'active-nav';} ?>" href="<?php echo base_url(); ?>administrator/team"><i data-feather="users"> </i><span>Team</span></a></li>
-            <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav <?php if($this->uri->segment(1) == 'administrator' && $this->uri->segment(2) == 'schedule'){echo 'active-nav';} ?>" href="<?php echo base_url(); ?>administrator/schedule"><i data-feather="calendar"> </i><span>Schedule</span></a></li>
+            <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav <?php if($this->uri->segment(1) == 'administrator' && $this->uri->segment(2) == 'registration'){echo 'active-nav';} ?>" href="<?php echo base_url(); ?>administrator/registration"><i data-feather="user"> </i><span>Registrations</span></a></li>
+            <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav <?php if($this->uri->segment(1) == 'administrator' && $this->uri->segment(2) == 'team'){echo 'active-nav';} ?>" href="<?php echo base_url(); ?>administrator/team"><i data-feather="users"> </i><span>Teams</span></a></li>
+            <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav <?php if($this->uri->segment(1) == 'administrator' && $this->uri->segment(2) == 'schedule'){echo 'active-nav';} ?>" href="<?php echo base_url(); ?>administrator/schedule"><i data-feather="calendar"> </i><span>Schedules</span></a></li>
           <?php if($this->session->userdata('role') == 'Admin'){ ?>
             <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav <?php if($this->uri->segment(1) == 'administrator' && $this->uri->segment(2) == 'user'){echo 'active-nav';} ?>" href="<?php echo base_url(); ?>administrator/user"><i data-feather="user-plus"> </i><span>Users</span></a></li>
+            <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav <?php if($this->uri->segment(1) == 'administrator' && $this->uri->segment(2) == 'video'){echo 'active-nav';} ?>" href="<?php echo base_url(); ?>administrator/video"><i data-feather="video"> </i><span>Videos</span></a></li>
           <?php } ?>
           <li class="sidebar-main-title">
             <div>

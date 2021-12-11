@@ -9,11 +9,21 @@ class Authorized extends CI_Controller {
         $this->load->helper('url');
 	}
 
+    private function load($title = '', $datapath = '')
+    {
+        $page = array(
+        );
+        return $page;
+    }
+
 	public function index()
 	{
 		if(!$this->session->userdata('logged_in')){
-			$datasend = array();
-			$this->load->view('dashboard/auth', $datasend);
+            $datasend = array(
+                'name' => $this->security->get_csrf_token_name(),
+                'hash' => $this->security->get_csrf_hash()
+            );
+            $this->load->view('dashboard/auth', $datasend);
 		}else{
 			redirect('administrator', 'refresh');
 		}

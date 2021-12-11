@@ -54,5 +54,9 @@ $route['404_override'] = 'Home';
 $route['translate_uri_dashes'] = FALSE;
 
 // blog
-$route['news/d/(:any)'] = 'News/detail/$1';
-$route['news/pages/(:any)'] = 'News/index/$1';
+// $route['news/d/(:any)'] = 'News/detail/$1';
+// $route['news/pages/(:any)'] = 'News/index/$1';
+
+// REGISTRATION 
+$route['registration/add'] = 'Home/addregistation';
+$route['blog/(:any)'] = 'Home/news/$1';

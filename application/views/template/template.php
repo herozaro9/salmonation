@@ -2,7 +2,6 @@
 <html>
 <?php echo $page["css"]; ?>
 	<body>
-		<!-- PAGE-LOADER -->
 		<div class="page-loader-wrapper page-loader-wrapper-3 flex-cc">
 			<div class="loader">
 				<div class="spinner">
@@ -11,7 +10,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- / PAGE-LOADER -->
 		<?php echo $page["header"];?>
 		<?php echo $content; ?>
 		<?php echo $page["footer"]; ?>

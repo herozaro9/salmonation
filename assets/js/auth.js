@@ -4,7 +4,7 @@ $(document).ready(function(){
         e.preventDefault();
         $.ajax({
             type: 'POST',
-            url: "https://salmonation.io/Authorized/login",
+            url: "https://localhost/salmonation/Authorized/login",
             data: {email : $("#email").val(), password : $("#password").val(),},
             success: function(response) {
                 if(response == true){

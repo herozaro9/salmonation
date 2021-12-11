@@ -25,7 +25,10 @@ class Administrator extends CI_Controller {
 	public function index()
 	{	
 		$path = "";
-		$datasend = array();
+		$datasend = array(
+			'csrf_name' => $this->security->get_csrf_token_name(),
+            'csrf_hash' => $this->security->get_csrf_hash()
+		);
 		$data = array(
 			"page" => $this->load("Dashboard", $path),
 			"content" =>$this->load->view('dashboard/index', $datasend, true)
@@ -41,6 +44,8 @@ class Administrator extends CI_Controller {
 			"aktif" => $this->db->query("SELECT COUNT('news_id') as total FROM news WHERE status='Aktif'")->result_array(),
 			"nonaktif" => $this->db->query("SELECT COUNT('news_id') as total FROM news WHERE status='Tidak Aktif'")->result_array(),
 			"all" => $this->db->query("SELECT * FROM news ORDER BY news_id DESC")->result_array(),
+			'csrf_name' => $this->security->get_csrf_token_name(),
+            'csrf_hash' => $this->security->get_csrf_hash()
 		);
 		$data = array(
 			"page" => $this->load("News Blog", $path),
@@ -58,6 +63,8 @@ class Administrator extends CI_Controller {
 			"followup" => $this->db->query("SELECT COUNT('registration_id') as total FROM registration WHERE status='Follow Up'")->result_array(),
 			"end" => $this->db->query("SELECT COUNT('registration_id') as total FROM registration WHERE status='Finished'")->result_array(),
 			"all" => $this->db->query("SELECT * FROM registration ORDER BY time_submit DESC")->result_array(),
+			'csrf_name' => $this->security->get_csrf_token_name(),
+            'csrf_hash' => $this->security->get_csrf_hash()
 		);
 		$data = array(
 			"page" => $this->load("Registration", $path),
@@ -71,6 +78,8 @@ class Administrator extends CI_Controller {
 		$path = "";
 		$datasend = array(
 			"all" => $this->db->query("SELECT * FROM team ORDER BY order_position DESC")->result_array(),
+			'csrf_name' => $this->security->get_csrf_token_name(),
+            'csrf_hash' => $this->security->get_csrf_hash()
 		);
 		$data = array(
 			"page" => $this->load("Team", $path),
@@ -88,6 +97,8 @@ class Administrator extends CI_Controller {
 			"commingsoon" => $this->db->query("SELECT COUNT('calendar_id') as total FROM calendar WHERE schedule > '$date'")->result_array(),
 			"missed" => $this->db->query("SELECT COUNT('calendar_id') as total FROM calendar WHERE schedule < '$date'")->result_array(),
 			"all" => $this->db->query("SELECT * FROM calendar ORDER BY schedule DESC")->result_array(),
+			'csrf_name' => $this->security->get_csrf_token_name(),
+            'csrf_hash' => $this->security->get_csrf_hash()
 		);
 		$data = array(
 			"page" => $this->load("Schedule", $path),
@@ -102,14 +113,16 @@ class Administrator extends CI_Controller {
 			$path = "";
 			$user_id = $this->session->userdata('id');
 			$datasend = array(
-				"totaluser" => $this->db->query("SELECT COUNT('user_id ') as total FROM user WHERE role='User'")->result_array(),
-				"totaladmin" => $this->db->query("SELECT COUNT('user_id ') as total FROM user WHERE role='Admin'")->result_array(),
-				"aktif" => $this->db->query("SELECT COUNT('user_id ') as total FROM user WHERE status='Aktif'")->result_array(),
-				"nonaktif" => $this->db->query("SELECT COUNT('user_id ') as total FROM user WHERE status='Tidak Aktif'")->result_array(),
+				"totaluser" => $this->db->query("SELECT COUNT('user_id') as total FROM user WHERE role='User'")->result_array(),
+				"totaladmin" => $this->db->query("SELECT COUNT('user_id') as total FROM user WHERE role='Admin'")->result_array(),
+				"aktif" => $this->db->query("SELECT COUNT('user_id') as total FROM user WHERE status='Aktif'")->result_array(),
+				"nonaktif" => $this->db->query("SELECT COUNT('user_id') as total FROM user WHERE status='Tidak Aktif'")->result_array(),
 				"all" => $this->db->query("SELECT * FROM user WHERE user_id!='$user_id' ORDER BY user_id DESC")->result_array(),
+				'csrf_name' => $this->security->get_csrf_token_name(),
+            	'csrf_hash' => $this->security->get_csrf_hash()
 			);
 			$data = array(
-				"page" => $this->load("Dashboard", $path),
+				"page" => $this->load("User", $path),
 				"content" =>$this->load->view('dashboard/user', $datasend, true)
 			);
 			$this->load->view('dashboard/template/template', $data);
@@ -118,11 +131,32 @@ class Administrator extends CI_Controller {
 		}
 	}
 
+	public function video()
+	{	
+		$path = "";
+		$user_id = $this->session->userdata('id');
+		$datasend = array(
+			"totalvideo" => $this->db->query("SELECT COUNT('video_id') as total FROM video")->result_array(),
+			"aktif" => $this->db->query("SELECT COUNT('video_id ') as total FROM video WHERE status='Aktif'")->result_array(),
+			"nonaktif" => $this->db->query("SELECT COUNT('video_id ') as total FROM video WHERE status='Tidak Aktif'")->result_array(),
+			"all" => $this->db->query("SELECT * FROM video ORDER BY video_id DESC")->result_array(),
+			'csrf_name' => $this->security->get_csrf_token_name(),
+        	'csrf_hash' => $this->security->get_csrf_hash()
+		);
+		$data = array(
+			"page" => $this->load("Video", $path),
+			"content" =>$this->load->view('dashboard/video', $datasend, true)
+		);
+		$this->load->view('dashboard/template/template', $data);
+	}
+
 	public function notification()
 	{	
 		$path = "";
 		$datasend = array(
 			"all" => $this->db->query("SELECT * FROM notification ORDER BY notification_id DESC")->result_array(),
+			'csrf_name' => $this->security->get_csrf_token_name(),
+            'csrf_hash' => $this->security->get_csrf_hash()
 		);
 		$data = array(
 			"page" => $this->load("Notification", $path),

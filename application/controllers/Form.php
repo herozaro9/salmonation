@@ -488,47 +488,141 @@ class Form extends CI_Controller {
 	// USER
 	public function adduser()
 	{	
-		date_default_timezone_set("Asia/Jakarta");
-		$username = $this->input->post('username');
-		$email = $this->input->post('email');
-		$status = $this->input->post('status');
-		$role = $this->input->post('role');
-		$password = md5($this->input->post('password'));
+		if($this->session->userdata('role') == 'Admin'){
+			date_default_timezone_set("Asia/Jakarta");
+			$username = $this->input->post('username');
+			$email = $this->input->post('email');
+			$status = $this->input->post('status');
+			$role = $this->input->post('role');
+			$password = md5($this->input->post('password'));
 
-		$query = "INSERT INTO user(username, email, status, role, password) VALUES(?, ?, ?, ?, ?)";
-		$bind = array($username, $email, $status, $role, $password);
-		$insert = $this->db->query($query, $bind);
-		if($insert){
-			$querynotif = "INSERT INTO notification(notification, author, icon, time_notification) VALUES(?, ?, ?, ?)";
-			$bindnotif = array('Add User', $this->session->userdata('username'), 'plus', date("Y-m-d H:i:s"));
-			$insertnotif = $this->db->query($querynotif, $bindnotif);
+			$query = "INSERT INTO user(username, email, status, role, password) VALUES(?, ?, ?, ?, ?)";
+			$bind = array($username, $email, $status, $role, $password);
+			$insert = $this->db->query($query, $bind);
+			if($insert){
+				$querynotif = "INSERT INTO notification(notification, author, icon, time_notification) VALUES(?, ?, ?, ?)";
+				$bindnotif = array('Add User', $this->session->userdata('username'), 'plus', date("Y-m-d H:i:s"));
+				$insertnotif = $this->db->query($querynotif, $bindnotif);
 
-			echo json_encode("ok");
+				echo json_encode("ok");
+			}else{
+				echo json_encode("Failed Insert Data!!");
+			}
 		}else{
-			echo json_encode("Failed Insert Data!!");
+			echo json_encode("You not have perimission!");
 		}		
 	}
 
 	public function edituser()
 	{
-		$user_id = $this->input->post('user_id');
-		date_default_timezone_set("Asia/Jakarta");
-		$username = $this->input->post('username');
-		$email = $this->input->post('email');
-		$status = $this->input->post('status');
-		$role = $this->input->post('role');
-		$password = md5($this->input->post('password'));
-		if(!empty($this->input->post('password'))){
-			$query = "UPDATE user SET username = ?, email = ?, status = ?, role = ?, password = ? WHERE user_id = ?";
-			$bind = array($username, $email, $status, $role, $password, $user_id);
+		if($this->session->userdata('role') == 'Admin'){
+			$user_id = $this->input->post('user_id');
+			date_default_timezone_set("Asia/Jakarta");
+			$username = $this->input->post('username');
+			$email = $this->input->post('email');
+			$status = $this->input->post('status');
+			$role = $this->input->post('role');
+			$password = md5($this->input->post('password'));
+			if(!empty($this->input->post('password'))){
+				$query = "UPDATE user SET username = ?, email = ?, status = ?, role = ?, password = ? WHERE user_id = ?";
+				$bind = array($username, $email, $status, $role, $password, $user_id);
+			}else{
+				$query = "UPDATE user SET username = ?, email = ?, status = ?, role = ? WHERE user_id = ?";
+				$bind = array($username, $email, $status, $role, $user_id);
+			}
+			$update = $this->db->query($query, $bind);
+			if($update){
+				$querynotif = "INSERT INTO notification(notification, author, icon, time_notification) VALUES(?, ?, ?, ?)";
+				$bindnotif = array('Edit User', $this->session->userdata('username'), 'edit', date("Y-m-d H:i:s"));
+				$insertnotif = $this->db->query($querynotif, $bindnotif);
+
+				echo json_encode("ok");
+			}else{
+				echo json_encode("Failed Update Data!!");
+			}
 		}else{
-			$query = "UPDATE user SET username = ?, email = ?, status = ?, role = ? WHERE user_id = ?";
-			$bind = array($username, $email, $status, $role, $user_id);
+			echo json_encode("You not have perimission!");
 		}
+	}
+
+	public function finduser()
+	{
+		if($this->session->userdata('role') == 'Admin'){
+			$user_id = $this->input->post('user_id');
+			$query = "SELECT * FROM user WHERE user_id = ? ORDER BY user_id DESC LIMIT 1";
+			$bind =array($user_id);
+			$query = $this->db->query($query, $bind);
+			if(!empty($query->num_rows())){
+				echo json_encode($query->result_array());
+			}else{
+				echo json_encode("fail");
+			}
+		}else{
+			echo json_encode("You not have perimission!");
+		}
+	}
+
+	public function deleteuser()
+	{
+		if($this->session->userdata('role') == 'Admin'){
+			$user_id = $this->input->post('user_id');
+			$image = $this->input->post('image');
+			$query = "DELETE FROM user WHERE user_id = ?";
+			$bind =array($user_id);
+			$query = $this->db->query($query, $bind);
+			if($query){
+				$querynotif = "INSERT INTO notification(notification, author, icon, time_notification) VALUES(?, ?, ?, ?)";
+				$bindnotif = array('Delete User', $this->session->userdata('username'), 'trash', date("Y-m-d H:i:s"));
+				$insertnotif = $this->db->query($querynotif, $bindnotif);
+
+				echo json_encode("ok");
+			}else{
+				echo json_encode("fail");
+			}
+		}else{
+			echo json_encode("You not have perimission!");
+		}
+	}
+
+	// vide
+	public function addvideo()
+	{	
+		date_default_timezone_set("Asia/Jakarta");
+		$title = $this->input->post('title');
+		$link = $this->input->post('link');
+		$status = $this->input->post('status');
+		$description = $this->input->post('description');
+
+		$query = "INSERT INTO video(title, link, status, description) VALUES(?, ?, ?, ?)";
+		$bind = array($title, $link, $status, $description);
+		$insert = $this->db->query($query, $bind);
+		if($insert){
+			$querynotif = "INSERT INTO notification(notification, author, icon, time_notification) VALUES(?, ?, ?, ?)";
+			$bindnotif = array('Add Video', $this->session->userdata('username'), 'plus', date("Y-m-d H:i:s"));
+			$insertnotif = $this->db->query($querynotif, $bindnotif);
+
+			echo json_encode("ok");
+		}else{
+			echo json_encode("Failed Insert Data!!");
+		}
+	}
+
+	public function editvideo()
+	{
+		$video_id = $this->input->post('video_id');
+		date_default_timezone_set("Asia/Jakarta");
+		$title = $this->input->post('title');
+		$link = $this->input->post('link');
+		$status = $this->input->post('status');
+		$description = $this->input->post('description');
+
+		$query = "UPDATE video SET title = ?, link = ?, status = ?, description = ? WHERE video_id = ?";
+		$bind = array($title, $link, $status, $description, $video_id);
+		
 		$update = $this->db->query($query, $bind);
 		if($update){
 			$querynotif = "INSERT INTO notification(notification, author, icon, time_notification) VALUES(?, ?, ?, ?)";
-			$bindnotif = array('Edit User', $this->session->userdata('username'), 'edit', date("Y-m-d H:i:s"));
+			$bindnotif = array('Edit Video', $this->session->userdata('username'), 'edit', date("Y-m-d H:i:s"));
 			$insertnotif = $this->db->query($querynotif, $bindnotif);
 
 			echo json_encode("ok");
@@ -537,11 +631,11 @@ class Form extends CI_Controller {
 		}
 	}
 
-	public function finduser()
+	public function findvideo()
 	{
-		$user_id = $this->input->post('user_id');
-		$query = "SELECT * FROM user WHERE user_id = ? ORDER BY user_id DESC LIMIT 1";
-		$bind =array($user_id);
+		$video_id = $this->input->post('video_id');
+		$query = "SELECT * FROM video WHERE video_id = ? ORDER BY video_id DESC LIMIT 1";
+		$bind =array($video_id);
 		$query = $this->db->query($query, $bind);
 		if(!empty($query->num_rows())){
 			echo json_encode($query->result_array());
@@ -550,16 +644,16 @@ class Form extends CI_Controller {
 		}
 	}
 
-	public function deleteuser()
+	public function deletevideo()
 	{
-		$user_id = $this->input->post('user_id');
+		$video_id = $this->input->post('video_id');
 		$image = $this->input->post('image');
-		$query = "DELETE FROM user WHERE user_id = ?";
-		$bind =array($user_id);
+		$query = "DELETE FROM video WHERE video_id = ?";
+		$bind =array($video_id);
 		$query = $this->db->query($query, $bind);
 		if($query){
 			$querynotif = "INSERT INTO notification(notification, author, icon, time_notification) VALUES(?, ?, ?, ?)";
-			$bindnotif = array('Delete User', $this->session->userdata('username'), 'trash', date("Y-m-d H:i:s"));
+			$bindnotif = array('Delete Video', $this->session->userdata('username'), 'trash', date("Y-m-d H:i:s"));
 			$insertnotif = $this->db->query($querynotif, $bindnotif);
 
 			echo json_encode("ok");

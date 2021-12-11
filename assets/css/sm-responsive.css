@@ -24,12 +24,12 @@
 }
 @media (min-width: 1200px) and (max-width: 1499px) {
 	
-	#main-wrapper .container { width: 1100px; }
+	/*#main-wrapper .container { width: 1100px; }*/
 
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	
-	#main-wrapper .container { width: 950px; }
+	/*#main-wrapper .container { width: 950px; }*/
 
 }
 @media (min-width: 992px) {
@@ -82,10 +82,10 @@
 */
 @media (min-width: 200px) and (max-width: 767px) {	
 
-	#home-wrapper.flex-cc { padding: 100px 0; overflow-y: scroll; }
+	#home-wrapper.flex-cc { padding: 100px 0; overflow-y: hidden; }
 	#home-wrapper.flex-cc,
 	.pages.single-page > .outer-wrp { 
-		overflow-y: scroll; 
+		overflow-y: hidden; 
 		display: block; 
 		position: relative; 
 		padding: 80px 0; 
@@ -138,7 +138,7 @@
 }
 @media (min-width: 600px) and (max-width: 767px) {
 
-	#main-wrapper .container { width: 550px; }
+	/*#main-wrapper .container { width: 550px; }*/
 
 	/*----------  TITLE  ----------*/
 	.title-wrp { margin-bottom: 50px; }
@@ -158,7 +158,7 @@
 }
 @media (min-width: 480px) and (max-width: 599px) {
 
-	#main-wrapper .container { width: 440px; }
+	/*#main-wrapper .container { width: 440px; }*/
 
 	/*----------  TITLE  ----------*/
 	.title-wrp { margin-bottom: 40px; }
@@ -179,7 +179,7 @@
 	/*----------  INTRO-SECTION-1  ----------*/
 	.intro-section-1 .logo { margin-bottom: 26px; }
 	.intro-section-1 .text-animation { margin-bottom: 43px; }
-	.intro-section-1 .text-animation .hd-text .main-text { font-size: 22px; }
+	.intro-section-1 .text-animation .hd-text .main-text { font-size: 40px;margin-top:20px }
 	.intro-section-1 .text-animation .main-text { font-size: 36px; }
 	.intro-section-1 .subscribe-form-1 { margin-bottom: 50px; }
 
@@ -205,7 +205,7 @@
 @media (min-width: 200px) and (max-width: 479px) {
 	
 	
-	#main-wrapper .container { width: 300px; }
+	/*#main-wrapper .container { width: 300px; }*/
 	.pages .pg-close,
 	#page-right.pages .pg-close { top: 20px; right: 20px; }
 	.sections { padding: 80px 0; }
@@ -254,7 +254,7 @@
 	/*----------  INTRO-SECTION-1  ----------*/
 	.intro-section-1 .logo { margin-bottom: 21px; }
 	.intro-section-1 .text-animation { margin-bottom: 38px; }
-	.intro-section-1 .text-animation .hd-text .main-text { font-size: 20px; }
+	.intro-section-1 .text-animation .hd-text .main-text { font-size: 40px; margin-top:20px }
 	.intro-section-1 .text-animation .main-text { font-size: 30px; }
 	.intro-section-1 .subscribe-form-1 { margin-bottom: 45px; }
 

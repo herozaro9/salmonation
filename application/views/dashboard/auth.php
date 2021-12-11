@@ -61,6 +61,7 @@
 									</div>
 									<div class="fxt-form">
 										<form method="POST" id="authform">
+											<input type="hidden" name="<?php echo $name;?>" value="<?php echo $hash;?>" />
 											<div class="fxt-transformY-50 fxt-transition-delay-1">
 												<label for="">E-mail</label>
 												<div class="fxt-form-row">

@@ -109,7 +109,7 @@
                   <input type="text" name="igadd" placeholder="https://instagram.com/" class="form-control">
                 </div>
               </div>
-              <div class="col-lg-12 mb-2">
+              <div class="col-lg-12">
                 <div class="form-group">
                   <label>Twitter</label>
                   <input type="text" name="twadd" placeholder="https://twitter.com/" class="form-control">
@@ -202,7 +202,7 @@
                   <input type="text" name="igedit" placeholder="https://instagram.com/" class="form-control">
                 </div>
               </div>
-              <div class="col-lg-12 mb-2">
+              <div class="col-lg-12">
                 <div class="form-group">
                   <label>Twitter</label>
                   <input type="text" name="twedit" placeholder="https://twitter.com/" class="form-control">
@@ -235,6 +235,7 @@
         form.append('tw', $('input[name="twadd"]').val());
         form.append('order_position', $('input[name="order_positionadd"]').val());
         form.append('status', $('select[name="statusadd"]').val());
+        form.append('<?php echo $csrf_name;?>', '<?php echo $csrf_hash;?>');
 
         $("#loading").show();
         $.ajax({
@@ -271,6 +272,7 @@
         form.append('tw', $('input[name="twedit"]').val());
         form.append('order_position', $('input[name="order_positionedit"]').val());
         form.append('status', $('select[name="statusedit"]').val());
+        form.append('<?php echo $csrf_name;?>', '<?php echo $csrf_hash;?>');
         if ($('input[name="imageedit"]').val() != "") {
           form.append('file', $('input[name="imageedit"]')[0].files[0]);
           form.append('hgambar', $('input[name="hgambaredit"]').val());
@@ -303,7 +305,7 @@
     function findteam(team_id){
       $.ajax({
         url: '<?php echo base_url(); ?>form/findteam',
-        data: {team_id : team_id},
+        data: {team_id : team_id, <?php echo $csrf_name;?>: '<?php echo $csrf_hash;?>'},
         type: 'POST',
         datatype: "JSON",
         success: function (response) {
@@ -342,7 +344,7 @@
             $("#loading").show();
             $.ajax({
               url: '<?php echo base_url() ?>form/deleteteam',
-              data: {team_id : team_id, image : image},
+              data: {team_id : team_id, image : image, <?php echo $csrf_name;?>: '<?php echo $csrf_hash;?>'},
               type: 'POST',
               datatype: "JSON",
               success: function (response) {

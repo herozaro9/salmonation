@@ -166,6 +166,7 @@
         var form = new FormData();
         form.append('registration_id', $('input[name="registration_id"]').val());
         form.append('status', $('select[name="statusedit"]').val());
+        form.append('<?php echo $csrf_name;?>', '<?php echo $csrf_hash;?>');
         
         $("#loading").show();
         $.ajax({
@@ -194,7 +195,7 @@
     function findregistration(registration_id){
       $.ajax({
         url: '<?php echo base_url(); ?>form/findregistration',
-        data: {registration_id : registration_id},
+        data: {registration_id : registration_id, <?php echo $csrf_name;?>: '<?php echo $csrf_hash;?>'},
         type: 'POST',
         datatype: "JSON",
         success: function (response) {
@@ -228,7 +229,7 @@
           $("#loading").show();
           $.ajax({
             url: '<?php echo base_url() ?>form/deleteregistration',
-            data: {registration_id : registration_id},
+            data: {registration_id : registration_id, <?php echo $csrf_name;?>: '<?php echo $csrf_hash;?>'},
             type: 'POST',
             datatype: "JSON",
             success: function (response) {
