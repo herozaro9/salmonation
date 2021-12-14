@@ -17,7 +17,7 @@
 * FONTS
 *******************************************************************
 */
-.ff1 { font-family: 'Open Sans', sans-serif; }
+.ff1 { font-family: 'Poppins', sans-serif; }
 
 
 /**
@@ -82,7 +82,7 @@ body,
 .about-section-1 .content-wrp p,
 .info-box-1 .info .hd,
 .info-box-1 .sub-txt {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 
@@ -105,7 +105,7 @@ h6,
 .h5,
 .h6 {
 	margin: 0;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	color: #fff;
 }
 
@@ -439,8 +439,10 @@ h6,
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	border: none;
-	transition: 0.3s;
+    transition: 0.3s;
+    display: block;
+    border-radius: 7px;
+    border: 2px solid #fff;
 }
 .btn-glass:hover { background: linear-gradient(to top, #FF7701, #f0a80e); color: #fff; border: 2px solid transparent !important;}
 
@@ -693,7 +695,8 @@ h6,
 
 /*----------  NAVIGATION-WRP-1  ----------*/
 .navigation-wrp-1 { text-align: center; }
-.navigation-wrp-1 .inner-wrp { display: block; }
+.navigation-wrp-1 .inner-wrp {     text-align: center;
+    display: flex !important; }
 .navigation-wrp-1 .nav-link {
 	color: #fff;
 	text-transform: uppercase;
@@ -1007,19 +1010,22 @@ h6,
 	margin-bottom: 12px;
 }
 .intro-section-1 .text-animation .hd-text .main-text {color: #FF7701;
-	font-size: 50px;
-	margin-bottom: px; font-weight: 700; }
+	margin-bottom: 10px; font-weight: 700;
+	font-size: 66px;
+    line-height: 1.212em;
+    font-weight: 800;
+    letter-spacing: -0.01em; }
 	.intro-section-1 .text-animation .hd-text .second-text {
 		color: #fff;
-		font-size: 17px;
+		font-size: 20px;
 		font-weight: 700;
 		text-transform: uppercase;
 	    margin-bottom: 30px;
 	}
 	.intro-section-1 .text-animation .hd-text p {
 		color: #ddd;
-		font-size: 15px;
-	    line-height: 25px;
+	    font-size: 18px;
+	    line-height: 30px;
 	}
 	.intro-section-1 .text-animation .main-text {
 		font-size: 40px;

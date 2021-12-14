@@ -203,3 +203,31 @@ iziToast.settings({
 // 		document.querySelector("#s").innerHTML = "0";
 // 	}
 // }, 1000);
+// 
+$('.owl-carousel').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: false,
+  navText: [
+  "<i class='fa fa-caret-left'></i>",
+  "<i class='fa fa-caret-right'></i>"
+  ],
+  autoplay: true,
+  autoplayHoverPause: true,
+  pagination: false,
+  dots: false,
+  responsive: {
+    600: {
+      items: 1
+    },
+    700: {
+      items: 3
+    },
+    1000: {
+      items: 4
+    },
+    1200: {
+      items: 5
+    }
+  }
+})

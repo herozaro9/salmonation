@@ -25,7 +25,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$path = "";
-		$date = date('d-m-Y');
+		$date = date('Y-m-d');
 		$datasend = array(
 			"team" => $this->db->query("SELECT * FROM team WHERE status='Aktif' ORDER BY order_position DESC")->result_array(),
 			"blog" => $this->db->query("SELECT * FROM news WHERE status='Aktif' ORDER BY news_id DESC limit 6")->result_array(),
@@ -69,10 +69,32 @@ class Home extends CI_Controller {
 		$name = $this->clean($this->input->post('name'));
 		$mail = $this->clean($this->input->post('mail'));
 		$phone = $this->clean($this->input->post('phone'));
+		$telegram = $this->clean($this->input->post('telegram'));
+		$project = $this->clean($this->input->post('project'));
 		$description = $this->clean($this->input->post('description'));
 		$date = date('Y-m-d H:i:s');
-		$query = "INSERT INTO registration(name, mail, phone, description, time_submit, status) VALUES(?, ?, ?, ?, ?, ?)";
-		$bind = array($name, $mail, $phone, $description, $date, 'Pending');
+		$query = "INSERT INTO registration(name, mail, phone, description, time_submit, status, telegram, project) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+		$bind = array($name, $mail, $phone, $description, $date, 'Pending', $telegram, $project);
+		$insert = $this->db->query($query, $bind);
+		if($insert){
+			echo json_encode("ok");
+		}else{
+			echo json_encode("Failed Insert Data!!");
+		}
+	}
+
+	public function addjointeam()
+	{	
+		date_default_timezone_set("Asia/Jakarta");
+		$name = $this->clean($this->input->post('name'));
+		$mail = $this->clean($this->input->post('mail'));
+		$phone = $this->clean($this->input->post('phone'));
+		$telegram = $this->clean($this->input->post('telegram'));
+		$project = $this->clean($this->input->post('project'));
+		$description = $this->clean($this->input->post('description'));
+		$date = date('Y-m-d H:i:s');
+		$query = "INSERT INTO join_team(name, mail, phone, description, time_submit, status, telegram, project) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+		$bind = array($name, $mail, $phone, $description, $date, 'Pending', $telegram, $project);
 		$insert = $this->db->query($query, $bind);
 		if($insert){
 			echo json_encode("ok");

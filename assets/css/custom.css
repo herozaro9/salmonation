@@ -8,6 +8,7 @@ body{
     color: #fff;
     width: 100%;
     height: 100%;
+    font-family: 'Poppins', sans-serif;
 }
 
 .logo img{
@@ -100,6 +101,41 @@ body{
 	width: 350px;
 	margin: 0px auto;
 	display: block;
+}
+
+.icon-partner{
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.icon-partner img{
+  width: auto !important;
+  display: block !important;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  max-height: 75px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    max-width: 200px;
+}
+
+.owl-controls{
+    display: none !important;
+}
+
+#partner-section{
+    padding-top: 50px;
+    padding-bottom: 65px;
 }
 
 /*FOOTER*/
@@ -253,7 +289,12 @@ footer .copy-right{
 }
 
 section{
-	padding: calc(50px + 50 * (100vw - 250px) / 1080) 0;
+	padding-top: 70px;
+    padding-bottom: 120px;
+}
+
+#tentang-kami{
+    padding-bottom: 65px;
 }
 
 .title-border-left-right-bottom {
@@ -925,6 +966,224 @@ section{
     margin-right: 5px;
 }
 
+.ecosystem-p-header{
+    font-size: 18px;
+}
+
+.text-ecosystem{
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.img-ecosystem{
+    margin: 0px auto;
+    display: block;
+}
+
+.icon-community{
+    background: linear-gradient(to top, #FF7701, #f0a80e);
+    position: relative;
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/*ROADMAP*/
+.roadmap-list {
+    position: relative;
+    padding: 30px 40px 0 40px;
+}
+
+.roadmap-list:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 1px;
+    height: 100%;
+    background: #b7b7b7;
+    z-index: 0;
+}
+
+.roadmap-box {
+    position: relative;
+    width: calc(100% - 30px);
+    background: rgb(28 32 38);
+    box-shadow: 1px 1px 60px #FF770110;
+    border-radius: 20px;
+    padding: 32px 40px 33px 40px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.roadmap-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 100%;
+    background: #FF7701;
+    border-radius: 0 20px 20px 0;
+}
+
+.roadmap-box.orange:before {
+    background: #FF7701;
+}
+
+.roadmap-box.blue:before {
+    background: #5370e2;
+}
+
+.roadmap-box.green:before {
+    background: #47b5b9;
+}
+
+.roadmap-box.purple:before {
+    background: #5560b4;
+}
+
+.roadmap-box.right {
+    text-align: right;
+}
+
+.roadmap-box.left {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.roadmap-box.left:before {
+    right: auto;
+    left: 0;
+    border-radius: 20px 0 0 20px;
+}
+
+.roadmap-box .h3-title {
+    margin-bottom: 6px;
+}
+
+.roadmap-box p {
+    margin-bottom: 10px;
+}
+
+.roadmap-box .p-non {
+    color: #8b8b8b;
+}
+
+.roadmap-year {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.roadmap-year:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translate(0,-50%);
+    width: 20px;
+    height: 20px;
+    background: #FF7701;
+    border-radius: 50%;
+}
+
+.roadmap-year.orange:before {
+    background: #FF7701;
+}
+
+.roadmap-year.blue:before {
+    background: #5370e2;
+}
+
+.roadmap-year.green:before {
+    background: #47b5b9;
+}
+
+.roadmap-year.purple:before {
+    background: #5560b4;
+}
+
+.roadmap-year.left {
+    padding-left: 30px;
+}
+
+.roadmap-year.right {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 30px;
+}
+
+.roadmap-year.left:before {
+    left: -21px;
+}
+
+.roadmap-year.right:before {
+    left: auto;
+    right: -21px;
+}
+
+.roadmap-year .h4-title {
+    margin-bottom: 0;
+    color: #FF7701;
+}
+
+.roadmap-year.orange .h4-title {
+    color: #FF7701;
+}
+
+.roadmap-year.blue .h4-title {
+    color: #5370e2;
+}
+
+.roadmap-year.green .h4-title {
+    color: #47b5b9;
+}
+
+.roadmap-year.purple .h4-title {
+    color: #5560b4;
+}
+
+.benefit-nft{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.benefit-nft .icon-community{
+    width: 100px;
+}
+
+.benefit-nft p{
+    margin-left: 20px;
+}
+
+select option{
+    color: #000006;
+}
+
+.img-banner-1{
+    position: absolute;
+    z-index: -1;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 37%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.border-bottom-0{
+    border-bottom: 0px !important;
+}
 /**
 ******************************************************************
 *	DESKTOP LAYOUT 
@@ -969,13 +1228,28 @@ section{
 *	MOBILE & TABLET COMMON
 ******************************************************************
 */
-@media(max-width: 1024px) {
+@media(max-width: 1025px) {
 	html, body, #main-wrapper, #home-wrapper {
 	    height: auto !important;
 	}
+
 	#home-wrapper {
 	    padding: 50px 0px;
-	}   
+	} 
+
+    .img-banner-1{
+        width: 300px;
+        position: relative;
+        transform: none;
+        left: 0;
+        right: 0;
+        margin: 0px auto;
+        display: block;
+    } 
+    
+    .icon-partner img{
+        max-width: 150px;
+    }
 }
 
 /**
@@ -1029,9 +1303,50 @@ section{
     	max-width: 50%;
 	}
 
+    .icon-partner img{
+        max-width: 90px;
+    }
+
+    .roadmap-list{
+        padding: 30px 0px 0 40px;
+    }
+
+    .roadmap-year.left:before, .roadmap-year.right:before{
+        left: -25px;
+    }
+
+    .roadmap-year.left, .roadmap-year.right{
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .roadmap-box.left{
+        margin-left: 0px;
+    }
+
+    .roadmap-list:before{
+        left: 25px;
+    }
+
+    .roadmap-box.orange:before {
+        background: transparent;
+    }
+
+    .roadmap-box.right {
+        text-align: left;
+    }
+
+    section{
+        padding-bottom: 70px;
+    }
+
 	html, body, #main-wrapper, #home-wrapper{
-		height: auto !important;
+		height: 95% !important;
 	}
+
+    #home-wrapper{
+        display: flex !important;
+    }
 
 	footer .sosmed-footer{
 		display: block !important;
@@ -1064,7 +1379,50 @@ section{
 	.img-raw-right{
 		width: 100%;
 	}
-	
+
+    .intro-section-1 .text-animation .hd-text .second-text{
+        font-size: 18px;
+    }
+
+    .intro-section-1 .text-animation .hd-text p {
+        color: #ddd;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .img-banner-1{
+        width: 200px;
+        position: relative;
+        transform: none;
+        left: 0;
+        right: 0;
+        margin: 0px auto;
+        display: block;
+    }
+
+    .team-img{
+        height: 400px;
+    }
+
+    .team-text{
+        margin-top: -30px;
+    }
+
+    .benefit-nft .icon-community {
+        width: 200px;
+    }
+
+    #partner-section {
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
+    section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    #tentang-kami {
+        padding-bottom: 40px;
+    }
 }
 
 /**

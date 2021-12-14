@@ -197,6 +197,55 @@ class Form extends CI_Controller {
 		}
 	}
 
+	// JOIN TEAM
+	public function editjointeam()
+	{
+		$join_id = $this->input->post('join_id');
+		$status = $this->input->post('status');
+		$query = "UPDATE join_team SET status = ? WHERE join_id = ?";
+		$bind = array($status, $join_id);
+		$update = $this->db->query($query, $bind);
+		if($update){
+			$querynotif = "INSERT INTO notification(notification, author, icon, time_notification) VALUES(?, ?, ?, ?)";
+			$bindnotif = array('Edit Request Join Team', $this->session->userdata('username'), 'edit', date("Y-m-d H:i:s"));
+			$insertnotif = $this->db->query($querynotif, $bindnotif);
+
+			echo json_encode("ok");
+		}else{
+			echo json_encode("Failed Update Data!!");
+		}
+	}
+
+	public function findjointeam()
+	{
+		$join_id = $this->input->post('join_id');
+		$query = "SELECT * FROM join_team WHERE join_id = ? ORDER BY join_id DESC LIMIT 1";
+		$bind =array($join_id);
+		$query = $this->db->query($query, $bind);
+		if(!empty($query->num_rows())){
+			echo json_encode($query->result_array());
+		}else{
+			echo json_encode("fail");
+		}
+	}
+
+	public function deletejointeam()
+	{
+		$join_id = $this->input->post('join_id');
+		$query = "DELETE FROM join_team WHERE join_id = ?";
+		$bind =array($join_id);
+		$query = $this->db->query($query, $bind);
+		if($query){
+			$querynotif = "INSERT INTO notification(notification, author, icon, time_notification) VALUES(?, ?, ?, ?)";
+			$bindnotif = array('Delete Request Join Team', $this->session->userdata('username'), 'trash', date("Y-m-d H:i:s"));
+			$insertnotif = $this->db->query($querynotif, $bindnotif);
+
+			echo json_encode("ok");
+		}else{
+			echo json_encode("fail");
+		}
+	}
+
 	// TEAM
 	public function addteam()
 	{	

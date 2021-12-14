@@ -24,7 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/icon.png" />
     <!-- GOOGLE FONTS -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins:500,400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
     <!-- FONT-ICON -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/lib/et-line-font/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -33,6 +33,7 @@
     <!-- DEFAULT-LIB -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/lib/animation/animate.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/lib/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/lib/owl-carousel/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/lib/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/lib/Magnific-Popup/magnific-popup.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/lib/vegas/vegas.min.css">

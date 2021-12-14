@@ -73,6 +73,25 @@ class Administrator extends CI_Controller {
 		$this->load->view('dashboard/template/template', $data);
 	}
 
+	public function jointeam()
+	{	
+		$path = "";
+		$datasend = array(
+			"total" => $this->db->query("SELECT COUNT('join_id') as total FROM join_team")->result_array(),
+			"pending" => $this->db->query("SELECT COUNT('join_id') as total FROM join_team WHERE status='Pending'")->result_array(),
+			"followup" => $this->db->query("SELECT COUNT('join_id') as total FROM join_team WHERE status='Follow Up'")->result_array(),
+			"end" => $this->db->query("SELECT COUNT('join_id') as total FROM join_team WHERE status='Finished'")->result_array(),
+			"all" => $this->db->query("SELECT * FROM join_team ORDER BY time_submit DESC")->result_array(),
+			'csrf_name' => $this->security->get_csrf_token_name(),
+            'csrf_hash' => $this->security->get_csrf_hash()
+		);
+		$data = array(
+			"page" => $this->load("Join Team", $path),
+			"content" =>$this->load->view('dashboard/jointeam', $datasend, true)
+		);
+		$this->load->view('dashboard/template/template', $data);
+	}
+
 	public function team()
 	{	
 		$path = "";
@@ -90,7 +109,7 @@ class Administrator extends CI_Controller {
 
 	public function schedule()
 	{	
-		$date = date('d-m-Y');
+		$date = date('Y-m-d');
 		$path = "";
 		$datasend = array(
 			"total" => $this->db->query("SELECT COUNT('calendar_id') as total FROM calendar")->result_array(),
