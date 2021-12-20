@@ -60,4 +60,5 @@ $route['translate_uri_dashes'] = FALSE;
 // REGISTRATION 
 $route['registration/add'] = 'Home/addregistation';
 $route['join-team/add'] = 'Home/addjointeam';
+$route['join-whitelist/add'] = 'Home/addjoinwhitelist';
 $route['blog/(:any)'] = 'Home/news/$1';

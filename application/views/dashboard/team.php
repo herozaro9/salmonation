@@ -3,13 +3,13 @@
   <div class="card earning-card">
     <div class="card-body p-0">
       <div class="row m-0">
-        <div class="col-xl-3 earning-content p-0">
+        <div class="col-xl-12 earning-content p-0">
           <div class="row m-0 chart-left pb-0">
-            <div class="col-xl-12 p-0 left_side_earning">
+            <div class="col-xl-10 p-0 left_side_earning">
               <h5>Teams</h5>
               <p class="font-roboto">Overview data team</p>
             </div>
-            <div class="col-xl-12 p-0 left-btn a-right-bgt"><button type="button" class="btn btn-gradient a2-right-bgt" data-bs-toggle="modal" data-bs-target="#myModalnew">Add Team</button></div>
+            <div class="col-xl-2 p-0 left-btn a-right-bgt"><button type="button" class="btn btn-gradient a2-right-bgt" data-bs-toggle="modal" data-bs-target="#myModalnew">Add Team</button></div>
           </div>
         </div>
         <div class="col-lg-12 pb-3 pt-3">

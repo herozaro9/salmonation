@@ -1,17 +1,30 @@
 <div id="main-wrapper" class="main-wrapper">
-  <!-- <div class="bg-section bg-cover bg-cc">
-    <div class="overlay" style="background-color: rgba(0,0,0,0.35);"></div>
-  </div> -->
+  <div class="bg-section bg-cover bg-cc">
+    <div class="overlay" style="background-color: transparent;"></div>
+
+    <!-- STAR ANIMATION -->
+    <div class="bg-animation">
+      <div id='stars'></div>
+      <div id='stars2'></div>
+      <div id='stars3'></div>
+      <div id='stars4'></div>
+    </div><!-- / STAR ANIMATION -->
+    
+  </div>
   <div id="home-wrapper" class="flex-cc page-wrapper">
     <div class="inner-wrapper">
       <div class="intro-section intro-section-1 animated s0-8" data-animOut="fadeOut" data-animIn="fadeIn">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10 col-sm-11 col-12 order-md-1 order-sm-2 order-2">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12 order-md-1 order-sm-2 order-2">
               <div class="text-animation text-center mb-2">
                 <div class="hd-text border-bottom-0">
                   <img src="<?php echo base_url(); ?>assets/images/banner-1.svg" class="img-banner-1">
-                  <img src="<?php echo base_url(); ?>assets/images/banner-2.svg" class="img-fluid">
+                  <div class="header-title mb-0">
+                    <div class="header-title text-center mb-0">
+                      SALMON NATION
+                    </div>
+                  </div>
                   <p class="second-text">SALMON UNTUK INDONESIA</p>
                 </div>
               </div>
@@ -26,29 +39,60 @@
   <div class="container">
     <div class="row owl-carousel">
       <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\yahoo.png" alt="Salmonation Partner" width="auto">
+        <img src="<?php echo base_url(); ?>assets\images\partner\1.png" alt="Salmonation Partner" width="auto">
         <br>
       </div>
       <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\marketwatch.png" alt="Salmonation Partner" width="auto">
+        <img src="<?php echo base_url(); ?>assets\images\partner\2.png" alt="Salmonation Partner" width="auto">
         <br>
       </div>
       <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\coinmarketcap.png" alt="Salmonation Partner" width="auto">
+        <img src="<?php echo base_url(); ?>assets\images\partner\3.png" alt="Salmonation Partner" width="auto">
         <br>
       </div>
       <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\dextools.png" alt="Salmonation Partner" width="auto">
+        <img src="<?php echo base_url(); ?>assets\images\partner\4.png" alt="Salmonation Partner" width="auto">
         <br>
       </div>
       <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\bussinessinsider.png" alt="Salmonation Partner" width="auto">
+        <img src="<?php echo base_url(); ?>assets\images\partner\5.png" alt="Salmonation Partner" width="auto">
+        <br>
+      </div>
+      <div class="icon-partner">
+        <img src="<?php echo base_url(); ?>assets\images\partner\6.png" alt="Salmonation Partner" width="auto">
+        <br>
+      </div>
+      <div class="icon-partner">
+        <img src="<?php echo base_url(); ?>assets\images\partner\7.png" alt="Salmonation Partner" width="auto">
+        <br>
+      </div>
+      <div class="icon-partner">
+        <img src="<?php echo base_url(); ?>assets\images\partner\8.png" alt="Salmonation Partner" width="auto">
+        <br>
+      </div>
+      <div class="icon-partner">
+        <img src="<?php echo base_url(); ?>assets\images\partner\9.png" alt="Salmonation Partner" width="auto">
+        <br>
+      </div>
+      <div class="icon-partner">
+        <img src="<?php echo base_url(); ?>assets\images\partner\10.png" alt="Salmonation Partner" width="auto">
+        <br>
+      </div>
+      <div class="icon-partner">
+        <img src="<?php echo base_url(); ?>assets\images\partner\11.png" alt="Salmonation Partner" width="auto">
+        <br>
+      </div>
+      <div class="icon-partner">
+        <img src="<?php echo base_url(); ?>assets\images\partner\12.png" alt="Salmonation Partner" width="auto">
+        <br>
+      </div>
+      <div class="icon-partner">
+        <img src="<?php echo base_url(); ?>assets\images\partner\13.png" alt="Salmonation Partner" width="auto">
         <br>
       </div>
     </div>
   </div>
 </section>
-
 <section id="tentang-kami">
   <div class="container">
     <div class="row">
@@ -70,8 +114,51 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-md-5 col-sm-12 col-12 d-flex align-items-center order-md-2 order-sm-1 order-1">
+      <div class="col-lg-5 col-md-5 col-sm-12 col-12 d-flex align-items-center order-md-2 order-sm-1 order-1 mb-media-3">
         <img src="<?php echo base_url(); ?>assets/images/about.svg" alt="" class="img-raw-right">
+      </div>
+    </div>
+  </div>
+</section>
+<section id="tentang-kami">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-5 col-sm-12 col-12 d-flex align-items-center order-md-1 order-sm-1 order-1 mb-media-3">
+        <div class="position-relative w-100">
+          <div id="containerchart"></div>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-12 col-12 d-flex align-items-center order-md-2 order-sm-1 order-1">
+        <div class="">
+          <div class="text-animation mb-2">
+            <div class="hd-text">
+              <h3 class="title-border-left-right-bottom text-left">Tokenomic</h3>
+              <div class="header-title text-left">
+                SALMON NATION TOKENOMIC
+              </div>
+            </div>
+          </div>
+          <div class="benefit-nft row d-flex align-items-center">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+              <div class="icon-community">
+                <i class="fas fa-lock"></i>
+              </div>
+            </div>
+            <div class="col-lg-10 col-md-9 col-sm-9 col-9">
+            <p>90% Add Liquidity</p>
+            </div>
+          </div>
+          <div class="benefit-nft row d-flex align-items-center">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+              <div class="icon-community">
+                <i class="fas fa-cogs"></i>
+              </div>
+            </div>
+            <div class="col-lg-10 col-md-9 col-sm-9 col-9">
+            <p>10% Development (3% Marketing, 5% Development, 2% Core Team)</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -79,59 +166,56 @@
 <section id="ecosystem">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-12">
         <h3 class="title-border-left-right-bottom text-left">Ecosystem</h3>
         <div class="header-title text-left">
           SALMON NATION ECOSYSTEM
         </div>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex align-items-center">
-        <p class="ecosystem-p-header">These three components serve as the foundation for the ever-expanding Salmonation ecosystem.</p>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
         <div class="blog-box video-box">
           <div class="blog-text video-text pt-4">
-            <img src="<?php echo base_url(); ?>assets/images/ecosystem.png" alt="" width="150px" class="img-fluid mb-4  img-ecosystem">
+            <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-3.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
             <h3 class="h3-title"><a href="javascript:void(0)">DEFI</a></h3>
-            <p class="text-ecosystem">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p class="text-ecosystem">Sistem keuangan terpusat hingga keuangan peer-to-peer diaktifkan oleh teknologi yang terdesentralisasi yang dibangun di atas blockchain.</p>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
         <div class="blog-box video-box">
           <div class="blog-text video-text pt-4">
-            <img src="<?php echo base_url(); ?>assets/images/ecosystem.png" alt="" width="150px" class="img-fluid mb-4  img-ecosystem">
+            <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-2.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
             <h3 class="h3-title"><a href="javascript:void(0)">GAMEFI</a></h3>
-            <p class="text-ecosystem">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p class="text-ecosystem">Sistem yang menggabungkan keuangan terdesentralisasi (DeFi) dan Non Fungiable token (NFT) dengan game online berbasis blockchain.</p>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
         <div class="blog-box video-box">
           <div class="blog-text video-text pt-4">
-            <img src="<?php echo base_url(); ?>assets/images/ecosystem.png" alt="" width="150px" class="img-fluid mb-4  img-ecosystem">
+            <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-4.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
             <h3 class="h3-title"><a href="javascript:void(0)">MEME</a></h3>
-            <p class="text-ecosystem">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p class="text-ecosystem">Mata uang cryptocurrency yang berasal dari Meme Internet atau memiliki karakteristik lucu lainnya berbasis blockchain. Kekuatan Meme coin ini adalah komunitas. </p>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
         <div class="blog-box video-box">
           <div class="blog-text video-text pt-4">
-            <img src="<?php echo base_url(); ?>assets/images/ecosystem.png" alt="" width="150px" class="img-fluid mb-4  img-ecosystem">
+            <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-1.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
             <h3 class="h3-title"><a href="javascript:void(0)">DAO</a></h3>
-            <p class="text-ecosystem">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p class="text-ecosystem">Merupakan suatu perusahaan atau organisasi yang dijalankan oleh sistem yang terdapat pada program komputer, semua keputusan dikontrol oleh pemegang saham bukan dari pusat.</p>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
         <div class="blog-box video-box">
           <div class="blog-text video-text pt-4">
-            <img src="<?php echo base_url(); ?>assets/images/ecosystem.png" alt="" width="150px" class="img-fluid mb-4  img-ecosystem">
+            <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-5.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
             <h3 class="h3-title"><a href="javascript:void(0)">NFT</a></h3>
-            <p class="text-ecosystem">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p class="text-ecosystem">Salah satu aset digital yang tengah naik daun. Aset ini banyak dipakai oleh para seniman atau content creator untuk menjual karya-karya mereka.</p>
           </div>
         </div>
       </div>
@@ -144,41 +228,52 @@
       <div class="col-lg-12 col-md-12 col-sm-12 col-12">
         <h3 class="title-border-left-right-bottom">Our Service</h3>
         <div class="header-title">
-          SERVICE
+          SERVICES
         </div>
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
         <div class="blog-box video-box">
           <div class="blog-text video-text pt-4">
             <div class="icon-community">
               <i class="fas fa-cubes"></i>
             </div>
-            <h3 class="h3-title"><a href="javascript:void(0)">Konsultasi Tokenomic Crypto</a></h3>
-            <p class="text-ecosystem">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <h3 class="h3-title h3-service"><a href="javascript:void(0)">Konsultasi Tokenomic Crypto</a></h3>
+            <p class="text-ecosystem">Dengan memiliki pengalaman di dunia crypto yang kami miliki serta juga analisa crypto selama 3 tahun. Salmonation hadir untuk membantu para Developer bisa menjalankan projek dan juga memiliki tokenomic yang sesuai dengen projek meraka.</p>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
         <div class="blog-box video-box">
           <div class="blog-text video-text pt-4">
             <div class="icon-community">
               <i class="fas fa-briefcase"></i>
             </div>
-            <h3 class="h3-title"><a href="javascript:void(0)">Pembuatan Apps</a></h3>
-            <p class="text-ecosystem">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <h3 class="h3-title h3-service"><a href="javascript:void(0)">Pembuatan Apps & Smart Contract</a></h3>
+            <p class="text-ecosystem">Salmonation akan berkembang dengan memiliki beberapa partner Developer untuk bisa membantu ekosistem yang akan dibentuk. Partner Developer akan di sertifikasi oleh Salmonation untuk validasi terkait pembuatan projek Crypto.</p>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
         <div class="blog-box video-box">
           <div class="blog-text video-text pt-4">
             <div class="icon-community">
-              <i class="fas fa-user"></i>
+              <i class="fas fa-users"></i>
             </div>
-            <h3 class="h3-title"><a href="javascript:void(0)">Pengembangan Komunitas</a></h3>
-            <p class="text-ecosystem">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <h3 class="h3-title h3-service"><a href="javascript:void(0)">Pengembangan Komunitas Crypto</a></h3>
+            <p class="text-ecosystem">Dengan jaringan komunitas yang Salmonation miliki, kami akan membantu projek Anda bisa tersampaikan kepada investor yang tepat serta dapat membangun komunikasi yang tepat.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
+        <div class="blog-box video-box">
+          <div class="blog-text video-text pt-4">
+            <div class="icon-community">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <h3 class="h3-title h3-service"><a href="javascript:void(0)">Pemasaran Iklan Digital</a></h3>
+            <p class="text-ecosystem">Salmonation akan membantu menaikkan trafik pada website Anda dan juga akan membantu menyebar luaskan dalam berbagai platform iklan crypto serta juga platform Google, Instagram & Twitter.</p>
           </div>
         </div>
       </div>
@@ -188,7 +283,7 @@
 <section id="nft">
   <div class="container">
     <div class="row">
-      <div class="col-lg-5 col-sm-12 col-12 d-flex align-items-center">
+      <div class="col-lg-5 col-sm-12 col-12 d-flex align-items-center mb-media-3">
         <img src="<?php echo base_url(); ?>assets/images/nft.png" alt="" class="img-raw-right">
       </div>
       <div class="col-lg-7 col-sm-12 col-12">
@@ -198,7 +293,7 @@
         </div>
         <div class="nft-content">
           <h4 class="mb-4">1000 NFT @ 2 BNB</h4>
-          <p>Target pengumpulan liquidity pool sebesar HC = 1350bnb</p>
+          <p>Target pengumpulan liquidity pool sebesar HC = 2000bnb</p>
           <p>Total NFT dikeluarkan awal = 500 NFT. Seluruh hasil transaksi dialokasikan 100% dalam liquidity
           pool. Sehingga yang menentukan harga public adalah para investor awal.</p>
           <p>Bila terjadi kekurangan transaksi NFT. Di bawah 1000bnb maka akan dilakukan re presale NFT.
@@ -206,27 +301,6 @@
           dan akan di keluarkan di tahap berikutnya yang akan ditentukan oleh Developer.</p>
           <p>*developer berhak mengubah quota dan nilai nft yang akan diterbitkan. Tanpa ada
           pemberitahuan sebelumnya.</p>
-          <div class="benefit-nft">
-            <div class="icon-community">
-              <i class="fas fa-briefcase"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <div class="benefit-nft">
-            <div class="icon-community">
-              <i class="fas fa-cubes"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <div class="benefit-nft">
-            <div class="icon-community">
-              <i class="fas fa-rocket"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
         </div>
       </div>
     </div>
@@ -252,7 +326,7 @@
         <img src="<?php echo base_url(); ?>assets/images/soon.svg" class="img-fluid mb-4">
       </div>
       <div class="col-lg-7 col-md-8 col-sm-9 col-12">
-        <a href="javascript:void(0)" class="btn btn-glass">JOIN PRESALE</a>
+        <a href="javascript:void(0)" data-toggle="modal" data-target="#modalwhitelist" class="btn btn-glass">JOIN WHITELIST</a>
       </div>
     </div>
   </div>
@@ -260,8 +334,8 @@
 <section id="ama">
   <div class="container">
     <div class="row">
-      <div class="col-lg-5 col-sm-12 col-12 d-flex align-items-center">
-        <img src="<?php echo base_url(); ?>assets/images/ama-salmonation.svg" alt="" class="img-raw-right">
+      <div class="col-lg-5 col-sm-12 col-12 d-flex align-items-center mb-media-3">
+        <img src="<?php echo base_url(); ?>assets/images/ama.png" alt="" class="img-raw-right">
       </div>
       <div class="col-lg-7 col-sm-12 col-12">
         <h3 class="title-border-left-right-bottom text-left">Ask Me Anything</h3>
@@ -301,7 +375,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
               <div class="team-box">
                 <div class="team-img-box">
-                  <div class="team-img back-img" style="background-image: url('<?php echo base_url(); ?>upload/team/<?php echo $team['file']; ?>');background-position: top center;background-size: cover;">
+                  <div class="team-img back-img" style="background-image: url('<?php echo base_url(); ?>upload/team/<?php echo $team['file']; ?>');background-position: center;background-size: cover;">
                     <div class="team-social">
                       <?php if(!empty($team['ln']) || $team['ln'] !== ""){ ?>
                         <a href="<?php echo $team['ln']; ?>" target="_blank" title="Follow on Linkedin" tabindex="-1"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
@@ -505,7 +579,7 @@
                   <div class="field-group mt-3">
                     <textarea class="form-control" rows="5" cols="40" name="description" id="description" placeholder="Description of Project" style="height:auto;" required=""></textarea>
                   </div>
-                  <div class="row">
+                  <div class="row d-flex align-items-center">
                     <div class="col-lg-6 col-sm-6 col-12 mt-3">
                       <div id="captcha" class="captcha bg-white text-center"></div>
                     </div>
@@ -556,7 +630,7 @@
                   <div class="field-group mt-3">
                     <textarea class="form-control" rows="5" cols="40" name="description2" id="description2" placeholder="Description of Project" style="height:auto;" required=""></textarea>
                   </div>
-                  <div class="row">
+                  <div class="row d-flex align-items-center">
                     <div class="col-lg-6 col-sm-6 col-12 mt-3">
                       <div id="captcha2" class="captcha bg-white text-center"></div>
                     </div>

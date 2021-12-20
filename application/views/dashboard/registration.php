@@ -50,7 +50,7 @@
   <div class="card earning-card">
     <div class="card-body p-0">
       <div class="row m-0">
-        <div class="col-xl-3 earning-content p-0">
+        <div class="col-xl-12 earning-content p-0">
           <div class="row m-0 chart-left pb-0">
             <div class="col-xl-12 p-0 left_side_earning">
               <h5>Registrations</h5>

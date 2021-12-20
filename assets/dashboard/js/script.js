@@ -1,8 +1,5 @@
 (function ($) {
     "use strict";
-    $(".datatable").dataTable({
-        'responsive': true,
-    });
 
     $('.image-file').bind('change', function() {
         if ($(this).val()) {

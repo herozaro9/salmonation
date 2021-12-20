@@ -103,6 +103,24 @@ class Home extends CI_Controller {
 		}
 	}
 
+	public function addjoinwhitelist()
+	{	
+		date_default_timezone_set("Asia/Jakarta");
+		$fullname = $this->clean($this->input->post('fullname'));
+		$telegram = $this->clean($this->input->post('telegram'));
+		$twitter = $this->clean($this->input->post('twitter'));
+		$bscaddress = $this->clean($this->input->post('bscaddress'));
+		$email = $this->clean($this->input->post('email'));
+		$query = "INSERT INTO whitelist(fullname, telegram, twitter, bscaddress, email) VALUES(?, ?, ?, ?, ?)";
+		$bind = array($fullname, $telegram, $twitter, $bscaddress, $email);
+		$insert = $this->db->query($query, $bind);
+		if($insert){
+			echo json_encode("ok");
+		}else{
+			echo json_encode("Failed Insert Data!!");
+		}
+	}
+
 	function clean($str)
 	{
 		$t = preg_replace('/<[^<|>]+?>/', '', htmlspecialchars_decode($str));

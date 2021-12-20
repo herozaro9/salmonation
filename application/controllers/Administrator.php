@@ -92,6 +92,22 @@ class Administrator extends CI_Controller {
 		$this->load->view('dashboard/template/template', $data);
 	}
 
+	public function whitelist()
+	{	
+		$path = "";
+		$datasend = array(
+			"total" => $this->db->query("SELECT COUNT('whitelist_id') as total FROM whitelist")->result_array(),
+			"all" => $this->db->query("SELECT * FROM whitelist ORDER BY join_time DESC")->result_array(),
+			'csrf_name' => $this->security->get_csrf_token_name(),
+            'csrf_hash' => $this->security->get_csrf_hash()
+		);
+		$data = array(
+			"page" => $this->load("Whitelist", $path),
+			"content" =>$this->load->view('dashboard/whitelist', $datasend, true)
+		);
+		$this->load->view('dashboard/template/template', $data);
+	}
+
 	public function team()
 	{	
 		$path = "";

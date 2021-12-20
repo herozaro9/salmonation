@@ -13,16 +13,16 @@
     <meta property="og:title" content="Salmonation">
     <meta property="og:description"
         content="Salmonation">
-    <meta property="og:image" content="images/icon.png">
+    <meta property="og:image" content="<?php echo base_url(); ?>assets/images/orange-icon-christmas.png">
     <meta property="og:image:alt" content="Salmonation">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://salmonation.io/">
     <meta property="twitter:title" content="Salmonation">
     <meta property="twitter:description"
         content="Salmonation">
-    <meta property="twitter:image" content="images/icon.png">
+    <meta property="twitter:image" content="<?php echo base_url(); ?>assets/images/orange-icon-christmas.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/icon.png" />
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/orange-icon-christmas.png" />
     <!-- GOOGLE FONTS -->
     <link href='https://fonts.googleapis.com/css?family=Poppins:500,400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
     <!-- FONT-ICON -->

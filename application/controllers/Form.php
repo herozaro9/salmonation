@@ -711,6 +711,24 @@ class Form extends CI_Controller {
 		}
 	}
 
+	// WHITELIST
+	public function deletewhitelist()
+	{
+		$whitelist_id = $this->input->post('whitelist_id');
+		$query = "DELETE FROM whitelist WHERE whitelist_id = ?";
+		$bind =array($whitelist_id);
+		$query = $this->db->query($query, $bind);
+		if($query){
+			$querynotif = "INSERT INTO notification(notification, author, icon, time_notification) VALUES(?, ?, ?, ?)";
+			$bindnotif = array('Delete Whitelist', $this->session->userdata('username'), 'trash', date("Y-m-d H:i:s"));
+			$insertnotif = $this->db->query($querynotif, $bindnotif);
+
+			echo json_encode("ok");
+		}else{
+			echo json_encode("fail");
+		}
+	}
+
 	function slug($text)
 	{
 		$text = preg_replace('~[^\\pL\d]+~u', '-', $text);
