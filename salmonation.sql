@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.9.5deb2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 14, 2021 at 10:09 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.4.23
+-- Host: localhost:3306
+-- Generation Time: Dec 26, 2021 at 04:45 AM
+-- Server version: 8.0.27-0ubuntu0.20.04.1
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -28,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `calendar` (
-  `calendar_id` int(11) NOT NULL,
+  `calendar_id` int NOT NULL,
   `title` varchar(50) NOT NULL,
   `description` text NOT NULL,
   `schedule` date NOT NULL,
@@ -36,14 +37,14 @@ CREATE TABLE `calendar` (
   `time_end` time NOT NULL,
   `file` text NOT NULL,
   `link` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `calendar`
 --
 
 INSERT INTO `calendar` (`calendar_id`, `title`, `description`, `schedule`, `time_first`, `time_end`, `file`, `link`) VALUES
-(2, 'Salmonation x Dex Capital', '<h2>What is Lorem Ipsum?</h2>\n\n<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\n\n<h2>Why do we use it?</h2>\n\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\n\n<p>&nbsp;</p>\n\n<h2>Where does it come from?</h2>\n\n<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section 1.10.32.</p>\n\n<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from &quot;de Finibus Bonorum et Malorum&quot; by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>\n\n<h2>Where can I get some?</h2>\n\n<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&#39;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>\n', '2021-12-15', '20:00:00', '22:00:00', 'df31987d25e1761f777f2a52fa8824fb.jpg', 'https://t.me/salmonation');
+(3, 'AMA Salmonation at PCID', '', '2021-12-18', '20:00:00', '22:00:00', '960327667a2f73b643be5601ce258e66.png', 'https://t.me/PejuangCryptoID');
 
 -- --------------------------------------------------------
 
@@ -52,7 +53,7 @@ INSERT INTO `calendar` (`calendar_id`, `title`, `description`, `schedule`, `time
 --
 
 CREATE TABLE `join_team` (
-  `join_id` int(11) NOT NULL,
+  `join_id` int NOT NULL,
   `name` varchar(100) NOT NULL,
   `description` text NOT NULL,
   `mail` varchar(150) NOT NULL,
@@ -60,8 +61,20 @@ CREATE TABLE `join_team` (
   `status` varchar(50) DEFAULT NULL,
   `telegram` varchar(100) NOT NULL,
   `project` varchar(50) NOT NULL,
-  `time_submit` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `time_submit` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `join_team`
+--
+
+INSERT INTO `join_team` (`join_id`, `name`, `description`, `mail`, `phone`, `status`, `telegram`, `project`) VALUES
+(5, 'Salmon', 'Belajar dari om salmon, mau bawa teknologi blockchain ke dalam ekosistem BUMN. Dimulai dari tempat saya bekerja saat ini.', 'febby.warrior@gmail.com', '081367614739', 'Follow Up', '@utomo_febby', 'DAO'),
+(9, 'Hotden', 'Pelayanan keuangan yang terbuka dan transparan berbasis blockchain', 'hotden@rocketmail.com', '082257049027', 'Follow Up', 'HOTDEN PARULIAN SIMAMORA', 'DEFI'),
+(10, '', '', '', '', 'Pending', '', ''),
+(11, 'Eko Joko Saksono', 'Tim kreator NFT 2D, 3D, NFT effect &amp; pengembangan NFT Avatar 3D.\nTidak ada detail projek, just suggest idea for Gacha NFT &amp; minting NFT, create market di opensea.io FREE for all member &amp; holder Salmonation', 'ekojoko.vivo2@gmail.com', '08811680406', 'Follow Up', '@ekojokosaksono', 'MEME'),
+(12, 'fian', 'Wallet basis web, bisa buat create unlimited wallet.\ndi dalemnya memungkinkan Swap, track, NFT trade dan lainnya ', 'herozaro9@gmail.com', '087873398838', 'Pending', '@TukangRiset', 'Lainnya'),
+(13, 'bayu', 'Wadah yang menghubungkan berbagai unsur industri kreatif enertainment', 'bayu.fatullah@gmail.com', '0816750205', 'Pending', 'Bayu_Tanjung', 'Lainnya');
 
 -- --------------------------------------------------------
 
@@ -70,7 +83,7 @@ CREATE TABLE `join_team` (
 --
 
 CREATE TABLE `news` (
-  `news_id` int(11) NOT NULL,
+  `news_id` int NOT NULL,
   `title` varchar(150) NOT NULL,
   `slug` text NOT NULL,
   `description` text NOT NULL,
@@ -78,14 +91,14 @@ CREATE TABLE `news` (
   `publish` date NOT NULL,
   `status` enum('Aktif','Tidak Aktif') NOT NULL,
   `file` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `news`
 --
 
 INSERT INTO `news` (`news_id`, `title`, `slug`, `description`, `author`, `publish`, `status`, `file`) VALUES
-(3, 'Salmonation Ecosystem', 'salmonation-ecosystem', '<h2>What is Lorem Ipsum?</h2>\n\n<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\n\n<h2>Why do we use it?</h2>\n\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &#39;Content here, content here&#39;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &#39;lorem ipsum&#39; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\n\n<p>&nbsp;</p>\n\n<h2>Where does it come from?</h2>\n\n<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section 1.10.32.</p>\n\n<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from &quot;de Finibus Bonorum et Malorum&quot; by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>\n\n<h2>Where can I get some?</h2>\n\n<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&#39;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&#39;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>\n', 'Gilang', '2021-12-11', 'Aktif', '3af2f7980b82d204dd93bdb5c11c3c78.jpg');
+(4, 'Pertemuan dengan CoreTeam Travplay', 'pertemuan-dengan-coreteam-travplay', '<p>Om Salmon selaku founder salmonation bertemu dengan core team Travplay untuk membahas ekosistem Games.&nbsp;</p>\n\n<p>Dengan adanya pertemuan ini kita sepakat membangun dan mengembangkan ekosistem dan SDM yang berkualitas</p>\n\n<p>Tidak sampai disini, kita juga membahas banyak hal termasuk Ingin mengembangan Metaverse di dalam ekosistem Salmonation&nbsp;</p>\n', 'Gilang', '2021-12-25', 'Aktif', 'e56c734d173bf99202f8657db34dcaf3.jpg');
 
 -- --------------------------------------------------------
 
@@ -94,42 +107,85 @@ INSERT INTO `news` (`news_id`, `title`, `slug`, `description`, `author`, `publis
 --
 
 CREATE TABLE `notification` (
-  `notification_id` int(11) NOT NULL,
+  `notification_id` int NOT NULL,
   `notification` varchar(150) NOT NULL,
   `author` varchar(50) NOT NULL,
   `icon` varchar(50) NOT NULL,
-  `time_notification` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `time_notification` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `notification`
 --
 
-INSERT INTO `notification` (`notification_id`, `notification`, `author`, `icon`, `time_notification`) VALUES
-(1, 'Insert News', 'Gilang', 'plus', '2021-12-09 08:39:11'),
-(2, 'Delete News', 'Gilang', 'trash', '2021-12-09 08:49:32'),
-(3, 'Delete News', 'Gilang', 'trash', '2021-12-09 08:49:35'),
-(4, 'Delete News', 'Gilang', 'trash', '2021-12-09 08:49:37'),
-(5, 'Delete News', 'Gilang', 'trash', '2021-12-09 08:49:39'),
-(6, 'Delete News', 'Gilang', 'trash', '2021-12-09 08:49:40'),
-(7, 'Delete News', 'Gilang', 'trash', '2021-12-09 08:49:42'),
-(8, 'Edit Registration', 'Gilang', 'edit', '2021-12-09 02:51:04'),
-(9, 'Insert News', 'Gilang', 'plus', '2021-12-11 07:25:23'),
-(10, 'Add Video', 'Gilang', 'plus', '2021-12-11 07:47:14'),
-(11, 'Edit Video', 'Gilang', 'edit', '2021-12-11 07:48:56'),
-(12, 'Delete Video', 'Gilang', 'trash', '2021-12-11 01:49:04'),
-(13, 'Edit News', 'Gilang', 'edit', '2021-12-11 07:51:47'),
-(14, 'Add Team', 'Gilang', 'plus', '2021-12-11 07:52:45'),
-(15, 'Add Schedule', 'Gilang', 'plus', '2021-12-11 07:54:00'),
-(16, 'Add Video', 'Gilang', 'plus', '2021-12-11 07:55:03'),
-(17, 'Edit Team', 'Gilang', 'edit', '2021-12-11 09:08:52'),
-(18, 'Edit Schedule', 'Gilang', 'edit', '2021-12-11 09:14:43'),
-(19, 'Edit News', 'Gilang', 'edit', '2021-12-11 09:31:19'),
-(20, 'Edit Team', 'Gilang', 'edit', '2021-12-11 09:58:40'),
-(21, 'Delete Registration', 'Gilang', 'trash', '2021-12-11 04:17:46'),
-(22, 'Edit Schedule', 'Gilang', 'edit', '2021-12-11 11:11:04'),
-(23, 'Edit Request Join Team', 'Gilang', 'edit', '2021-12-14 03:08:54'),
-(24, 'Delete Request Join Team', 'Gilang', 'trash', '2021-12-14 03:08:58');
+INSERT INTO `notification` (`notification_id`, `notification`, `author`, `icon`) VALUES
+(1, 'Insert News', 'Gilang', 'plus'),
+(2, 'Delete News', 'Gilang', 'trash'),
+(3, 'Delete News', 'Gilang', 'trash'),
+(4, 'Delete News', 'Gilang', 'trash'),
+(5, 'Delete News', 'Gilang', 'trash'),
+(6, 'Delete News', 'Gilang', 'trash'),
+(7, 'Delete News', 'Gilang', 'trash'),
+(8, 'Edit Registration', 'Gilang', 'edit'),
+(9, 'Insert News', 'Gilang', 'plus'),
+(10, 'Add Video', 'Gilang', 'plus'),
+(11, 'Edit Video', 'Gilang', 'edit'),
+(12, 'Delete Video', 'Gilang', 'trash'),
+(13, 'Edit News', 'Gilang', 'edit'),
+(14, 'Add Team', 'Gilang', 'plus'),
+(15, 'Add Schedule', 'Gilang', 'plus'),
+(16, 'Add Video', 'Gilang', 'plus'),
+(17, 'Edit Team', 'Gilang', 'edit'),
+(18, 'Edit Schedule', 'Gilang', 'edit'),
+(19, 'Edit News', 'Gilang', 'edit'),
+(20, 'Edit Team', 'Gilang', 'edit'),
+(21, 'Delete Registration', 'Gilang', 'trash'),
+(22, 'Edit Schedule', 'Gilang', 'edit'),
+(23, 'Edit Request Join Team', 'Gilang', 'edit'),
+(24, 'Delete Request Join Team', 'Gilang', 'trash'),
+(25, 'Edit Team', 'Gilang', 'edit'),
+(26, 'Delete News', 'Gilang', 'trash'),
+(27, 'Delete Video', 'Gilang', 'trash'),
+(28, 'Delete Schedule', 'Gilang', 'trash'),
+(29, 'Add Schedule', 'Gilang', 'plus'),
+(30, 'Edit Schedule', 'Gilang', 'edit'),
+(31, 'Add Team', 'Gilang', 'plus'),
+(32, 'Edit Team', 'Gilang', 'edit'),
+(33, 'Delete Team', 'Gilang', 'trash'),
+(34, 'Edit Team', 'Gilang', 'edit'),
+(35, 'Add Team', 'Gilang', 'plus'),
+(36, 'Edit Team', 'Gilang', 'edit'),
+(37, 'Edit Team', 'Gilang', 'edit'),
+(38, 'Add Team', 'Gilang', 'plus'),
+(39, 'Edit Team', 'Gilang', 'edit'),
+(40, 'Edit Team', 'Gilang', 'edit'),
+(41, 'Add User', 'Gilang', 'plus'),
+(42, 'Edit Team', 'Gilang', 'edit'),
+(43, 'Add Video', 'delscla', 'plus'),
+(44, 'Edit Video', 'delscla', 'edit'),
+(45, 'Edit Video', 'delscla', 'edit'),
+(46, 'Edit Registration', 'delscla', 'edit'),
+(47, 'Edit Request Join Team', 'delscla', 'edit'),
+(48, 'Delete Request Join Team', 'delscla', 'trash'),
+(49, 'Edit Request Join Team', 'delscla', 'edit'),
+(50, 'Delete Request Join Team', 'delscla', 'trash'),
+(51, 'Delete Request Join Team', 'delscla', 'trash'),
+(52, 'Delete Registration', 'delscla', 'trash'),
+(53, 'Delete Registration', 'delscla', 'trash'),
+(54, 'Delete Registration', 'delscla', 'trash'),
+(55, 'Delete Registration', 'delscla', 'trash'),
+(56, 'Delete Registration', 'delscla', 'trash'),
+(57, 'Delete Whitelist', 'Gilang', 'trash'),
+(58, 'Delete Whitelist', 'Gilang', 'trash'),
+(59, 'Delete Whitelist', 'Gilang', 'trash'),
+(60, 'Edit Request Join Team', 'Gilang', 'edit'),
+(61, 'Edit Team', 'Gilang', 'edit'),
+(62, 'Insert News', 'Gilang', 'plus'),
+(63, 'Edit News', 'Gilang', 'edit'),
+(64, 'Delete Whitelist', 'Gilang', 'trash'),
+(65, 'Delete Whitelist', 'Gilang', 'trash'),
+(66, 'Delete Whitelist', 'Gilang', 'trash'),
+(67, 'Delete Whitelist', 'Gilang', 'trash');
 
 -- --------------------------------------------------------
 
@@ -138,7 +194,7 @@ INSERT INTO `notification` (`notification_id`, `notification`, `author`, `icon`,
 --
 
 CREATE TABLE `registration` (
-  `registration_id` int(11) NOT NULL,
+  `registration_id` int NOT NULL,
   `name` varchar(100) NOT NULL,
   `description` text NOT NULL,
   `mail` varchar(150) NOT NULL,
@@ -146,16 +202,16 @@ CREATE TABLE `registration` (
   `status` varchar(50) DEFAULT NULL,
   `telegram` varchar(100) NOT NULL,
   `project` varchar(50) NOT NULL,
-  `time_submit` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `time_submit` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `registration`
 --
 
-INSERT INTO `registration` (`registration_id`, `name`, `description`, `mail`, `phone`, `status`, `telegram`, `project`, `time_submit`) VALUES
-(1, 'Gilang Permana Putra', 'want to colaboration', 'gilangpermana1407@gmail.com', '0895616848424', 'Pending', '', '', '2021-12-09 08:51:04'),
-(3, 'Gilang Permana Putra', 'salmon', 'gilangpermana1407@gmail.com', '0895616848424', 'Pending', '', '', '2021-12-11 10:17:15');
+INSERT INTO `registration` (`registration_id`, `name`, `description`, `mail`, `phone`, `status`, `telegram`, `project`) VALUES
+(4, 'Lulung suprihatin', 'Terus berkembang', 'lukya593@gmail.com', '082322344264', 'Follow Up', '@lulung penjaga hati', 'GAMEFI'),
+(8, '', '', '', '', 'Pending', '', '');
 
 -- --------------------------------------------------------
 
@@ -164,7 +220,7 @@ INSERT INTO `registration` (`registration_id`, `name`, `description`, `mail`, `p
 --
 
 CREATE TABLE `team` (
-  `team_id` int(11) NOT NULL,
+  `team_id` int NOT NULL,
   `name` varchar(100) NOT NULL,
   `job` varchar(40) NOT NULL,
   `file` text NOT NULL,
@@ -173,15 +229,17 @@ CREATE TABLE `team` (
   `fb` text NOT NULL,
   `ig` text NOT NULL,
   `tw` text NOT NULL,
-  `order_position` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `order_position` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `team`
 --
 
 INSERT INTO `team` (`team_id`, `name`, `job`, `file`, `status`, `ln`, `fb`, `ig`, `tw`, `order_position`) VALUES
-(2, 'Gilang Permana Putra', 'Senior Dev', '305e70959f9422bae4e152a039d9288c.JPG', 'Aktif', 'https://linkedin.com/in/gprmnp', 'https://facebook.com/gprmnp', 'https://instagram.com/gprmnp_', 'https://twitter.com/gprmnp', 3);
+(2, 'Salmon', 'Founder & CEO', '6413fbb3ea96c13b9906fd14d3d4d72a.png', 'Aktif', 'https://linkedin.com/in/', 'https://facebook.com/', 'https://instagram.com/', 'https://twitter.com/', 3),
+(4, 'Galuh Aditia Putra', 'Community Development', '18a459627fe055e1b943f38b3df2ba19.png', 'Aktif', '', '', '', '', 2),
+(5, 'Sri', 'Marketing Communication', '0e2cb9284987ecc37a705d9e1e97e9cf.png', 'Aktif', '', '', '', '', 2);
 
 -- --------------------------------------------------------
 
@@ -190,22 +248,23 @@ INSERT INTO `team` (`team_id`, `name`, `job`, `file`, `status`, `ln`, `fb`, `ig`
 --
 
 CREATE TABLE `user` (
-  `user_id` int(11) NOT NULL,
+  `user_id` int NOT NULL,
   `username` varchar(50) NOT NULL,
   `email` text NOT NULL,
   `password` text NOT NULL,
   `role` enum('Admin','User') NOT NULL,
   `status` enum('Aktif','Tidak Aktif') NOT NULL,
-  `otp` int(11) NOT NULL,
+  `otp` int NOT NULL,
   `last_otp` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`user_id`, `username`, `email`, `password`, `role`, `status`, `otp`, `last_otp`) VALUES
-(1, 'Gilang', 'gilangpermana1407@gmail.com', 'c37fddfb7b3f538674c6e9a77e7bf486', 'Admin', 'Aktif', 1234, '2021-12-08 19:21:38');
+(1, 'Gilang', 'gilangpermana1407@gmail.com', 'c37fddfb7b3f538674c6e9a77e7bf486', 'Admin', 'Aktif', 1234, '2021-12-08 19:21:38'),
+(3, 'delscla', 'delscla10@gmail.com', '1a4579e717808a98aef134c49bf8126a', 'Admin', 'Aktif', 0, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -214,19 +273,52 @@ INSERT INTO `user` (`user_id`, `username`, `email`, `password`, `role`, `status`
 --
 
 CREATE TABLE `video` (
-  `video_id` int(11) NOT NULL,
+  `video_id` int NOT NULL,
   `title` varchar(150) NOT NULL,
   `link` text NOT NULL,
   `description` text NOT NULL,
   `status` enum('Aktif','Tidak Aktif') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `video`
 --
 
 INSERT INTO `video` (`video_id`, `title`, `link`, `description`, `status`) VALUES
-(2, 'Salmonation Ecosystem', 'https://www.youtube.com/embed/ScMzIvxBSi4', 'Salmonation Ecosystem', 'Aktif');
+(3, 'Apresiasi dari Ketua DPRD KOTA BATAM , Untuk lahirnya Blockchain Indonesia.', 'https://www.youtube-nocookie.com/embed/5mfJu0WnyaI', 'Ucapan Apresiasi dr Dprd Kota Batam. untuk mahakarya anak bangsa, blockchain untuk ekosistem project di Indonesia. \n\nYang akan diKembangkan untuk memberikan manfaat bagi aktivitas , kreasi , dan sosial budaya . bagi masyarakat , bangsa dan Negara. \n\ndi prakasai oleh salmonation.\nyg berperan sebagai konsultan dan penasehat crypto. terkhusus tokenomic project crypto.  \n\ndan juga pengembangan akademi kompetensi untuk para pelaku pelaksana project dalam ekosistem di Indonesia.\n\nwww.salmonation.io\nwww.salmonchain.com', 'Aktif');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `whitelist`
+--
+
+CREATE TABLE `whitelist` (
+  `whitelist_id` int NOT NULL,
+  `fullname` varchar(100) NOT NULL,
+  `twitter` varchar(100) NOT NULL,
+  `telegram` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `bscaddress` varchar(100) NOT NULL,
+  `join_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `whitelist`
+--
+
+INSERT INTO `whitelist` (`whitelist_id`, `fullname`, `twitter`, `telegram`, `email`, `bscaddress`) VALUES
+(3, 'Fitra dekan arfiandi', '@fitra1597', 'We lose', 'fitradekanarfiandi15@gmail.com', '0x58850dd47363B2B6d5056aE483c8253E5654911A'),
+(4, 'Fadel reza ramadhan', '@farelTolemba', '@fareltolemba', 'farelrasya19@gmail.com', '0x49881D1E7f89F3163bF5254245F1d99A0e8E5828'),
+(7, 'Nanang Dinar ', '@NaDiTOzzZ ', '@naditoz', 'dinarnanang91@gmail.com', '0x732Df4C18cF7b5Cbd715B3CF07801472033DE3Cc'),
+(8, 'Aryo Susilo Jati', '@jatiaryo23', '@aryo', 'jatiaryo23@gmail.com', '0xa71454d25b0306c3396f6F96F4E2D8233f775824'),
+(9, 'Febby Perwiro Utomo', '@fby_lim', '@utomo_febby', 'febby.warrior@gmail.com', '0x121E1573B7C6c15Aa4C036d54BFd2974Cf38a163'),
+(10, 'pipinmoore', '@Nighmoore', '@Nighmoore', 'pipin.moore198@gmail.com', '0xfDf298E4745680146cEe97d77C5e6A9d70DE3F69'),
+(12, 'Sapri', '@sapriplek', '@Holder', 'pleksapri@gmail.com', '0x3CA767566cF4330a4926293c9b6EeAd214a2C109'),
+(13, 'Danu Darmanto', '@DarmantoDanu', '@DanuDm', 'danudarmanto13@gmail.com', '0xb9089480D94038d70a85248a21C50a84C2105D5D'),
+(14, 'Ibnu mulyono saputro', 'ibnums7', 'Ibnums7', 'ibnumulyonoims@gmail.com', '0x8787ea8f958492C0f35e1b4FD789A28C51472d77'),
+(18, 'Fikrin Gazali', 'Fikrin', 'Fiqras', 'fiqtrader17@gmail.com', '0x40f1533c8483bc979d747a88c19af11B18b4bd9b'),
+(19, 'Dwi koko', '@Dwikoko13', '@Aeroxcy', 'kokonthol@gmail.com', '0x848537352015ecB526B302E382671D08247d01Ee');
 
 --
 -- Indexes for dumped tables
@@ -281,6 +373,12 @@ ALTER TABLE `video`
   ADD PRIMARY KEY (`video_id`);
 
 --
+-- Indexes for table `whitelist`
+--
+ALTER TABLE `whitelist`
+  ADD PRIMARY KEY (`whitelist_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -288,49 +386,55 @@ ALTER TABLE `video`
 -- AUTO_INCREMENT for table `calendar`
 --
 ALTER TABLE `calendar`
-  MODIFY `calendar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `calendar_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `join_team`
 --
 ALTER TABLE `join_team`
-  MODIFY `join_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `join_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `news_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `notification`
 --
 ALTER TABLE `notification`
-  MODIFY `notification_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `notification_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `registration`
 --
 ALTER TABLE `registration`
-  MODIFY `registration_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `registration_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `team`
 --
 ALTER TABLE `team`
-  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `team_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `video`
 --
 ALTER TABLE `video`
-  MODIFY `video_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `video_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `whitelist`
+--
+ALTER TABLE `whitelist`
+  MODIFY `whitelist_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -2,24 +2,24 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><?php echo $title; ?></title>
-    <meta name="title" content="Salmonation">
+    <meta name="title" content="Salmonation - <?php echo $title; ?>">
     <meta name="description"
         content="Salmonation">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="keywords"
-        content="Salmonation">
+        content="Salmonation, salmonchain, salamon nation">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://salmonation.io/">
-    <meta property="og:title" content="Salmonation">
+    <meta property="og:title" content="Salmonation - <?php echo $title; ?>">
     <meta property="og:description"
-        content="Salmonation">
+        content="<?php echo $title; ?>">
     <meta property="og:image" content="<?php echo base_url(); ?>assets/images/orange-icon-christmas.png">
-    <meta property="og:image:alt" content="Salmonation">
+    <meta property="og:image:alt" content="Salmonation - <?php echo $title; ?>">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://salmonation.io/">
-    <meta property="twitter:title" content="Salmonation">
+    <meta property="twitter:title" content="Salmonation - <?php echo $title; ?>">
     <meta property="twitter:description"
-        content="Salmonation">
+        content="<?php echo $title; ?>">
     <meta property="twitter:image" content="<?php echo base_url(); ?>assets/images/orange-icon-christmas.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/orange-icon-christmas.png" />
