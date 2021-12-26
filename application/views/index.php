@@ -326,7 +326,7 @@
         <img src="<?php echo base_url(); ?>assets/images/soon.svg" class="img-fluid mb-4">
       </div>
       <div class="col-lg-7 col-md-8 col-sm-9 col-12">
-        <a href="javascript:void(0)" data-toggle="modal" data-target="#modalwhitelist" class="btn btn-glass">JOIN WHITELIST</a>
+        <a href="<?php echo base_url(); ?>waitlist" class="btn btn-glass">JOIN WAITLIST</a>
       </div>
     </div>
   </div>
@@ -418,7 +418,7 @@
               <div class="col-lg-6 col-md-12 order-lg-1 order-md-2 order-2">
                 <div class="roadmap-box right orange">
                   <p>Litepapper</p>
-                  <p class="p-non">Whitelist Presale NFT</p>
+                  <p class="p-non">Waitlist Presale NFT</p>
                   <p class="p-non">Sc testnet.</p>
                   <p class="p-non">AMA</p>
                 </div>
@@ -441,7 +441,7 @@
                   <p class="p-non">Sc deploy</p>
                   <p class="p-non">Public sale</p>
                   <p class="p-non">Update website</p>
-                  <p class="p-non">Apps start buildin</p>
+                  <p class="p-non">Apps start building</p>
                   <p class="p-non">Testnet blockchain **</p>
                   <p class="p-non">Governance vote (platform)</p>
                   <p class="p-non">Launchpad start building</p>
@@ -488,7 +488,7 @@
                       </div>
                       <div class="blog-text video-text">
                         <h3 class="h3-title"><a href="javascript:void(0)" title="<?php echo $video['title']; ?>"><?php echo $video['title']; ?></a></h3>
-                        <p><?php echo $video['description']; ?></p>
+                        <p><?php echo  strip_tags(character_limiter($video['description'], 250)); ?></p>
                       </div>
                     </div>
                   </div>
@@ -515,7 +515,7 @@
                   <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
                     <div class="blog-box">
                       <div class="blog-img-box">
-                        <div class="blog-img back-img" style="background-image: url('upload/news/<?php echo $blog['file']; ?>');">
+                        <div class="blog-img back-img" style="background-image: url('<?php echo base_url(); ?>upload/news/<?php echo $blog['file']; ?>');">
                         </div>
                         <div class="blog-date">
                           <a href="javascript:void(0);" title="</i><?php echo date('d M Y', strtotime($blog['publish'])); ?>"><i class="fa fa-calendar" aria-hidden="true"></i><?php echo date('d M Y', strtotime($blog['publish'])); ?></a>
@@ -523,12 +523,17 @@
                         </div>
                       </div>
                       <div class="blog-text">
-                        <h3 class="h3-title"><a href="<?php echo base_url(); ?>blog/<?php echo $blog['slug']; ?>" title="<?php echo $blog['title']; ?>"><?php echo $blog['title']; ?></a></h3>
+                        <h3 class="h3-title"><a href="<?php echo base_url(); ?>blog/d/<?php echo $blog['slug']; ?>" title="<?php echo $blog['title']; ?>"><?php echo $blog['title']; ?></a></h3>
                         <p><?php echo strip_tags(character_limiter($blog['description'], 250)); ?></p>
                       </div>
                     </div>
                   </div>
                 <?php } ?>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-8 col-sm-9 col-12">
+                  <a href="<?php echo base_url(); ?>blog" class="btn btn-glass">Other Blog</a>
+                </div>
               </div>
             </div>
           </div>
@@ -574,6 +579,7 @@
                       <option value="GAMEFI">Gamefi</option>
                       <option value="DAO">DAO</option>
                       <option value="MEME">Meme</option>
+                      <option value="Lainnya">Lainnya</option>
                     </select>
                   </div>
                   <div class="field-group mt-3">
@@ -597,7 +603,7 @@
           </div>
           <div class="col-lg-6 col-md-6 col-12 mb-2">
             <div class="card-transparent">
-              <h5 class="pb-3">Request Join Team</h5>
+              <h5 class="pb-3">Join Our Ecosystem</h5>
               <div class="subscribe-form subscribe-form-1" data-animout="fadeOutUp" data-animin="fadeInUp">
                 <form id="jointeam">
                   <div class="field-group">
@@ -625,10 +631,11 @@
                       <option value="GAMEFI">Gamefi</option>
                       <option value="DAO">DAO</option>
                       <option value="MEME">Meme</option>
+                      <option value="Lainnya">Lainnya</option>
                     </select>
                   </div>
                   <div class="field-group mt-3">
-                    <textarea class="form-control" rows="5" cols="40" name="description2" id="description2" placeholder="Description of Project" style="height:auto;" required=""></textarea>
+                    <textarea class="form-control" rows="5" cols="40" name="description2" id="description2" placeholder="Description your Profile" style="height:auto;" required=""></textarea>
                   </div>
                   <div class="row d-flex align-items-center">
                     <div class="col-lg-6 col-sm-6 col-12 mt-3">

@@ -19,7 +19,7 @@
           <a class="nav-link nav-menu go-to-div" href="#team">Team</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-menu" href="javascript:void(0)" data-toggle="modal" data-target="#modalwhitelist">Whitelist</a>
+          <a class="nav-link nav-menu" href="<?php echo base_url(); ?>waitlist">Whitelist</a>
         </li>
         <li class="nav-item">
           <a class="nav-link btn-whitepaper" href="<?php echo base_url(); ?>litepaper/Salmon Nation Pitch.pdf" target="_blank"><i class="fas fa-download"></i> Litepaper</a>

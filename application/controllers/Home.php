@@ -42,10 +42,62 @@ class Home extends CI_Controller {
 		$this->load->view('template/template', $data);
 	}
 
+	public function allnews()
+    {
+        $config['base_url'] = site_url('blog');
+        $this->db->from('news');
+        $this->db->where('status', 'Aktif');
+        $countdata = $this->db->count_all_results();
+        $config['total_rows'] = $countdata;
+        $config['per_page'] = 9;
+        $config["uri_segment"] = 2;
+        $choice = $config["total_rows"] / $config["per_page"];
+        $config["num_links"] = floor($choice);
+
+        $config['first_link'] = 'First';
+        $config['last_link'] = 'Last';
+        $config['next_link'] = 'Next';
+        $config['prev_link'] = 'Prev';
+        $config['full_tag_open'] = '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
+        $config['full_tag_close'] = '</ul></nav></div>';
+        $config['num_tag_open'] = '<li class="page-item"><span class="page-link">';
+        $config['num_tag_close'] = '</span></li>';
+        $config['cur_tag_open'] = '<li class="page-item active"><span class="page-link">';
+        $config['cur_tag_close'] = '<span class="sr-only">(current)</span></span></li>';
+        $config['next_tag_open'] = '<li class="page-item"><span class="page-link">';
+        $config['next_tagl_close'] = '<span aria-hidden="true">&raquo;</span></span></li>';
+        $config['prev_tag_open'] = '<li class="page-item"><span class="page-link">';
+        $config['prev_tagl_close'] = '</span>Next</li>';
+        $config['first_tag_open'] = '<li class="page-item"><span class="page-link">';
+        $config['first_tagl_close'] = '</span></li>';
+        $config['last_tag_open'] = '<li class="page-item"><span class="page-link">';
+        $config['last_tagl_close'] = '</span></li>';
+        $this->pagination->initialize($config);
+        $datasend['page'] = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+
+        $datasend['data'] = $this->get_data_list($config["per_page"], $datasend['page']);
+
+        $datasend['pagination'] = $this->pagination->create_links();
+        $path = "";
+        $data2 = array(
+            "page" => $this->load("Blog", $path),
+			"content" =>$this->load->view('allnews', $datasend, true)
+        );
+        $this->load->view('template/template', $data2);
+    }
+
+    public function get_data_list($limit, $start)
+    {
+        $this->db->order_by('news_id', "DESC");
+        $this->db->where('status', 'Aktif');
+        $query = $this->db->get('news', $limit, $start);
+        return $query->result_array();
+    }
+
 	public function news($slug)
 	{
 		$path = "";
-		$news = $this->db->query("SELECT * FROM news WHERE slug='$slug' ORDER BY news_id DESC LIMIT 1")->result_array();
+		$news = $this->db->query("SELECT * FROM news WHERE slug='$slug' AND status='Aktif' ORDER BY news_id DESC LIMIT 1")->result_array();
 		if(!empty($news[0])){
 			$datasend = array(
 				"othernews" => $this->db->query("SELECT * FROM news ORDER BY news_id DESC LIMIT 6")->result_array(),
@@ -119,6 +171,15 @@ class Home extends CI_Controller {
 		}else{
 			echo json_encode("Failed Insert Data!!");
 		}
+	}
+
+	public function waitlist()
+	{
+		$datasend = array(
+			'csrf_name' => $this->security->get_csrf_token_name(),
+            'csrf_hash' => $this->security->get_csrf_hash()
+		);
+		$this->load->view('waitlist', $datasend);
 	}
 
 	function clean($str)

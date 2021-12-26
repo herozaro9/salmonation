@@ -32,19 +32,10 @@
 <script type="text/javascript">
   var code;
   var code2;
-  var code3;
   $(document).ready(function () {
     createCaptcha();
     createCaptcha2();
-    createCaptcha3();
 
-    $("#buttonfollowtwitter").click(function(){
-      $("#twitterfollow").val('1')
-    })
-
-    $("#buttonfollowtele").click(function(){
-      $("#telegramfollow").val('1')
-    })
     $("#registration").submit(function (e) {
       e.preventDefault();
       if (document.getElementById("cpatchaTextBox").value == code) {
@@ -62,7 +53,7 @@
           },
           success: function (response) {
             if (JSON.parse(response) == 'ok') {
-              swal("Gotcha!", "Form Registrasi Anda Berhasil Dikirim! Mohon Tunggu Feedback Kami Melalui Email Atau Whatsapp!", "success");
+              swal("Success!", "Form Registrasi Anda Berhasil Dikirim! Mohon Tunggu Feedback Kami Melalui Email Atau Whatsapp!", "success");
               createCaptcha();
               $("input[name='fullname']").val('');
               $("input[name='email']").val('');
@@ -102,7 +93,7 @@
           },
           success: function (response) {
             if (JSON.parse(response) == 'ok') {
-              swal("Gotcha!", "Form Registrasi Anda Berhasil Dikirim! Mohon Tunggu Feedback Kami Melalui Email Atau Whatsapp!", "success");
+              swal("Success!", "Form Registrasi Anda Berhasil Dikirim! Mohon Tunggu Feedback Kami Melalui Email Atau Whatsapp!", "success");
               createCaptcha2();
               $("input[name='fullname2']").val('');
               $("input[name='email2']").val('');
@@ -122,57 +113,6 @@
         swal("Oops!", "Captcha Salah, Silahkan Coba Lagi!", "error");
         createCaptcha2();
         $("#cpatchaTextBox2").val('');
-      }
-    });
-
-    $("#joinwhitelist").submit(function (e) {
-      e.preventDefault();
-
-      if(!$("#twitterfollow").val()){
-        return swal("Error!", "Follow twitter terlebih dahulu!", "error");
-      }
-
-      if(!$("#telegramfollow").val()){
-        return swal("Error!", "Join telegram group terlebih dahulu!", "error");
-      }
-
-      if (document.getElementById("cpatchaTextBox3").value == code3) {
-        $.ajax({
-          type: 'POST',
-          url: "<?php echo base_url();?>join-whitelist/add",
-          data: {
-            fullname: $("input[name='fullnamejoin']").val(),
-            twitter: $("input[name='twitterjoin']").val(),
-            telegram: $("input[name='telegramjoin']").val(),
-            email: $("input[name='emailjoin']").val(),
-            bscaddress: $("input[name='bscaddressjoin']").val(),
-            <?php echo $csrf_name;?>: '<?php echo $csrf_hash;?>',
-          },
-          success: function (response) {
-            if (JSON.parse(response) == 'ok') {
-              swal("Gotcha!", "Berhasil join whitelist SALMONATION!", "success");
-              createCaptcha2();
-              $("input[name='fullnamejoin']").val('');
-              $("input[name='twitterjoin']").val('');
-              $("input[name='telegramjoin']").val('');
-              $("input[name='emailjoin']").val('');
-              $("input[name='bscaddressjoin']").val('');
-              $("input[name='twitterfollow']").val('');
-              $("input[name='telegramfollow']").val('');
-              $("#cpatchaTextBox3").val('');
-              $("#modalwhitelist").modal('hide');
-              createCaptcha3();
-            } else {
-              swal("Oops!", "Whitelist Gagal Dikirim! Silahkan Coba Lagi!", "error");
-              createCaptcha3();
-              $("#cpatchaTextBox3").val('');
-            }
-          }
-        });
-      } else {
-        swal("Oops!", "Captcha Salah, Silahkan Coba Lagi!", "error");
-        createCaptcha3();
-        $("#cpatchaTextBox3").val('');
       }
     });
   });
@@ -225,31 +165,6 @@
 
     code2 = captcha.join("");
     document.getElementById("captcha2").appendChild(canv);
-  }
-
-  function createCaptcha3() {
-    document.getElementById('captcha3').innerHTML = "";
-    var charsArray =
-    "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
-    var lengthOtp = 6;
-    var captcha = [];
-    for (var i = 0; i < lengthOtp; i++) {
-
-      var index = Math.floor(Math.random() * charsArray.length + 1);
-      if (captcha.indexOf(charsArray[index]) == -1)
-        captcha.push(charsArray[index]);
-      else i--;
-    }
-    var canv = document.createElement("canvas");
-    canv.id = "captcha3";
-    canv.width = 100;
-    canv.height = 50;
-    var ctx = canv.getContext("2d");
-    ctx.font = "25px Georgia";
-    ctx.strokeText(captcha.join(""), 0, 30);
-
-    code3 = captcha.join("");
-    document.getElementById("captcha3").appendChild(canv);
   }
 
   Highcharts.chart('containerchart', {

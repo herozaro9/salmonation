@@ -17,8 +17,8 @@
 					<div class="recent-post-box">
 						<div class="recent-post-img back-img" style="background-image:url('<?php echo base_url(); ?>upload/news/<?php echo $othernews['file'] ?>')"></div>
 						<div class="recent-post-text">
-							<h6><a href="<?php echo base_url(); ?>blog/<?php echo $othernews['slug'] ?>"><?php echo $othernews['title'] ?></a></h6>
-							<p><?php echo strip_tags(character_limiter($othernews['description'], 80)); ?></p>
+							<h6><a href="<?php echo base_url(); ?>blog/d/<?php echo $othernews['slug'] ?>"><?php echo $othernews['title'] ?></a></h6>
+							<p><?php echo strip_tags(character_limiter($othernews['description'], 40)); ?></p>
 						</div>
 					</div>
 				<?php } ?>
