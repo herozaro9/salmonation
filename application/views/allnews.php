@@ -4,7 +4,7 @@
       <div class="col-lg-12">
         <h3 class="title-border-left-right-bottom">New Blog</h3>
         <div class="header-title">
-          BLOG
+          SALMONESIA
         </div>
       </div>
       <div class="blog-list">

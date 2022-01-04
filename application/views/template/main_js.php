@@ -175,7 +175,7 @@
     plotShadow: false,
     type: 'pie'
   },
-  colors: ['#f57c00', '#ffb74d'],
+  colors: ['#f57c00', '#fb8c00 ', '#ffb74d', '#ffe0b2'],
   title: false,
   tooltip: {
     pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -202,13 +202,19 @@
     colorByPoint: true,
     innerSize: '45%',
     data: [{
-      name: 'Liquidity',
+      name: 'Liquidity Pool',
       y: 90,
       sliced: true,
       selected: true
     }, {
+      name: 'Team',
+      y: 2
+    }, {
+      name: 'Marketing',
+      y: 4
+    }, {
       name: 'Development',
-      y: 10
+      y: 4
     }]
   }]
 });

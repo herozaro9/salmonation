@@ -1,16 +1,17 @@
 <div id="main-wrapper" class="main-wrapper">
-  <div class="bg-section bg-cover bg-cc">
-    <div class="overlay" style="background-color: transparent;"></div>
+  <!-- <div class="bg-section bg-cover bg-cc">
+    <div class="overlay" style="background-color: transparent;"></div> -->
 
     <!-- STAR ANIMATION -->
-    <div class="bg-animation">
+    <!-- <div class="bg-animation">
       <div id='stars'></div>
       <div id='stars2'></div>
       <div id='stars3'></div>
       <div id='stars4'></div>
-    </div><!-- / STAR ANIMATION -->
+    </div> -->
+    <!-- / STAR ANIMATION -->
     
-  </div>
+  <!-- </div> -->
   <div id="home-wrapper" class="flex-cc page-wrapper">
     <div class="inner-wrapper">
       <div class="intro-section intro-section-1 animated s0-8" data-animOut="fadeOut" data-animIn="fadeIn">
@@ -120,7 +121,7 @@
     </div>
   </div>
 </section>
-<section id="tentang-kami">
+<section id="tokenomic">
   <div class="container">
     <div class="row">
       <div class="col-lg-5 col-md-5 col-sm-12 col-12 d-flex align-items-center order-md-1 order-sm-1 order-1 mb-media-3">
@@ -132,10 +133,20 @@
         <div class="">
           <div class="text-animation mb-2">
             <div class="hd-text">
-              <h3 class="title-border-left-right-bottom text-left">Tokenomic</h3>
+              <h3 class="title-border-left-right-bottom text-left">Tokenomic Initial Allocation</h3>
               <div class="header-title text-left">
                 SALMON NATION TOKENOMIC
               </div>
+            </div>
+          </div>
+          <div class="benefit-nft row d-flex align-items-center">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+              <div class="icon-community">
+                <i class="fas fa-database"></i>
+              </div>
+            </div>
+            <div class="col-lg-10 col-md-9 col-sm-9 col-9">
+            <p>Total supply     : 100.000.000 $SUI</p>
             </div>
           </div>
           <div class="benefit-nft row d-flex align-items-center">
@@ -145,17 +156,47 @@
               </div>
             </div>
             <div class="col-lg-10 col-md-9 col-sm-9 col-9">
-            <p>90% Add Liquidity</p>
+            <p>Liquidity Pool   : 90.000.000 $SUI</p>
             </div>
           </div>
           <div class="benefit-nft row d-flex align-items-center">
             <div class="col-lg-2 col-md-3 col-sm-3 col-3">
               <div class="icon-community">
-                <i class="fas fa-cogs"></i>
+                <i class="fas fa-users"></i>
               </div>
             </div>
             <div class="col-lg-10 col-md-9 col-sm-9 col-9">
-            <p>10% Development (3% Marketing, 5% Development, 2% Core Team)</p>
+            <p>Team     : 2.000.000 $SUI</p>
+            </div>
+          </div>
+          <div class="benefit-nft row d-flex align-items-center">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+              <div class="icon-community">
+                <i class="fas fa-bullhorn"></i>
+              </div>
+            </div>
+            <div class="col-lg-10 col-md-9 col-sm-9 col-9">
+            <p>Marketing    : 4.000.000 $SUI</p>
+            </div>
+          </div>
+          <div class="benefit-nft row d-flex align-items-center">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+              <div class="icon-community">
+                <i class="fas fa-laptop"></i>
+              </div>
+            </div>
+            <div class="col-lg-10 col-md-9 col-sm-9 col-9">
+            <p>Development    : 4.000.000 $SUI</p>
+            </div>
+          </div>
+          <div class="benefit-nft row d-flex align-items-center">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+              <div class="icon-community">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+            </div>
+            <div class="col-lg-10 col-md-9 col-sm-9 col-9">
+            <p>Reflection(10%) <br> Marketing : 3%, Development   : 4%, Main Pool   : 3%</p>
             </div>
           </div>
         </div>
@@ -506,7 +547,7 @@
             <div class="col-lg-12">
               <h3 class="title-border-left-right-bottom">New Blog</h3>
               <div class="header-title">
-                BLOG
+                SALMONESIA
               </div>
             </div>
             <div class="blog-list">
