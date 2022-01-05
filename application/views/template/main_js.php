@@ -35,7 +35,7 @@
   $(document).ready(function () {
     createCaptcha();
     createCaptcha2();
-
+    $("#telemodal").modal('show');
     $("#registration").submit(function (e) {
       e.preventDefault();
       if (document.getElementById("cpatchaTextBox").value == code) {

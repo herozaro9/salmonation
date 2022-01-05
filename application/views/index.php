@@ -11,22 +11,23 @@
     </div> -->
     <!-- / STAR ANIMATION -->
     
-  <!-- </div> -->
-  <div id="home-wrapper" class="flex-cc page-wrapper">
-    <div class="inner-wrapper">
-      <div class="intro-section intro-section-1 animated s0-8" data-animOut="fadeOut" data-animIn="fadeIn">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-12 order-md-1 order-sm-2 order-2">
-              <div class="text-animation text-center mb-2">
-                <div class="hd-text border-bottom-0">
-                  <img src="<?php echo base_url(); ?>assets/images/banner-1.svg" class="img-banner-1">
-                  <div class="header-title mb-0">
-                    <div class="header-title text-center mb-0">
-                      SALMON NATION
+    <!-- </div> -->
+    <div id="home-wrapper" class="flex-cc page-wrapper">
+      <div class="inner-wrapper">
+        <div class="intro-section intro-section-1 animated s0-8" data-animOut="fadeOut" data-animIn="fadeIn">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-12 order-md-1 order-sm-2 order-2">
+                <div class="text-animation text-center mb-2">
+                  <div class="hd-text border-bottom-0">
+                    <img src="<?php echo base_url(); ?>assets/images/banner-1.svg" class="img-banner-1">
+                    <div class="header-title mb-0">
+                      <div class="header-title text-center mb-0">
+                        SALMON NATION
+                      </div>
                     </div>
+                    <p class="second-text">SALMON UNTUK INDONESIA</p>
                   </div>
-                  <p class="second-text">SALMON UNTUK INDONESIA</p>
                 </div>
               </div>
             </div>
@@ -35,326 +36,325 @@
       </div>
     </div>
   </div>
-</div>
-<section id="partner-section">
-  <div class="container">
-    <div class="row owl-carousel">
-      <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\1.png" alt="Salmonation Partner" width="auto">
-        <br>
-      </div>
-      <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\2.png" alt="Salmonation Partner" width="auto">
-        <br>
-      </div>
-      <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\3.png" alt="Salmonation Partner" width="auto">
-        <br>
-      </div>
-      <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\4.png" alt="Salmonation Partner" width="auto">
-        <br>
-      </div>
-      <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\5.png" alt="Salmonation Partner" width="auto">
-        <br>
-      </div>
-      <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\6.png" alt="Salmonation Partner" width="auto">
-        <br>
-      </div>
-      <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\7.png" alt="Salmonation Partner" width="auto">
-        <br>
-      </div>
-      <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\8.png" alt="Salmonation Partner" width="auto">
-        <br>
-      </div>
-      <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\9.png" alt="Salmonation Partner" width="auto">
-        <br>
-      </div>
-      <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\10.png" alt="Salmonation Partner" width="auto">
-        <br>
-      </div>
-      <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\11.png" alt="Salmonation Partner" width="auto">
-        <br>
-      </div>
-      <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\12.png" alt="Salmonation Partner" width="auto">
-        <br>
-      </div>
-      <div class="icon-partner">
-        <img src="<?php echo base_url(); ?>assets\images\partner\13.png" alt="Salmonation Partner" width="auto">
-        <br>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="tentang-kami">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-7 col-md-7 col-sm-12 col-12 d-flex align-items-center order-md-1 order-sm-2 order-2">
-        <div class="text-animation mb-2">
-          <div class="hd-text">
-            <h3 class="title-border-left-right-bottom text-left">Tentang Kami</h3>
-            <div class="header-title text-left">
-              SALMON NATION
-            </div>
-            <p>Salmonation memberikan jasa konsultan dan penasihat kepada para pedagang / developer di Indonesia awalnya, untuk menciptakan sebuah keharmonisan tokenomic dalam sebuah project yang dijalankan guna mencapai keberhasilan project. Secara tidak langsung akan  menciptakan sebuah standarisasi tokenomic yang tepat untuk sebuah  project yang dijalankan.</p>
-          </div>
-          <div class="navigation-wrp-1">
-            <div class="inner-wrp">
-              <a href="https://t.me/salmonation" target="_blank" class="nav-link"><i class="fab fa-telegram-plane"></i></a>
-              <a href="https://twitter.com/thesalmonation" target="_blank" class="nav-link"><i class="fab fa-twitter"></i></a>
-              <a href="https://salmonchain.com/" target="_blank" class="nav-link"><i class="fas fa-layer-group"></i></a>
-            </div>
-          </div>
+  <section id="partner-section">
+    <div class="container">
+      <div class="row owl-carousel">
+        <div class="icon-partner">
+          <img src="<?php echo base_url(); ?>assets\images\partner\1.png" alt="Salmonation Partner" width="auto">
+          <br>
+        </div>
+        <div class="icon-partner">
+          <img src="<?php echo base_url(); ?>assets\images\partner\2.png" alt="Salmonation Partner" width="auto">
+          <br>
+        </div>
+        <div class="icon-partner">
+          <img src="<?php echo base_url(); ?>assets\images\partner\3.png" alt="Salmonation Partner" width="auto">
+          <br>
+        </div>
+        <div class="icon-partner">
+          <img src="<?php echo base_url(); ?>assets\images\partner\4.png" alt="Salmonation Partner" width="auto">
+          <br>
+        </div>
+        <div class="icon-partner">
+          <img src="<?php echo base_url(); ?>assets\images\partner\5.png" alt="Salmonation Partner" width="auto">
+          <br>
+        </div>
+        <div class="icon-partner">
+          <img src="<?php echo base_url(); ?>assets\images\partner\6.png" alt="Salmonation Partner" width="auto">
+          <br>
+        </div>
+        <div class="icon-partner">
+          <img src="<?php echo base_url(); ?>assets\images\partner\7.png" alt="Salmonation Partner" width="auto">
+          <br>
+        </div>
+        <div class="icon-partner">
+          <img src="<?php echo base_url(); ?>assets\images\partner\8.png" alt="Salmonation Partner" width="auto">
+          <br>
+        </div>
+        <div class="icon-partner">
+          <img src="<?php echo base_url(); ?>assets\images\partner\9.png" alt="Salmonation Partner" width="auto">
+          <br>
+        </div>
+        <div class="icon-partner">
+          <img src="<?php echo base_url(); ?>assets\images\partner\10.png" alt="Salmonation Partner" width="auto">
+          <br>
+        </div>
+        <div class="icon-partner">
+          <img src="<?php echo base_url(); ?>assets\images\partner\11.png" alt="Salmonation Partner" width="auto">
+          <br>
+        </div>
+        <div class="icon-partner">
+          <img src="<?php echo base_url(); ?>assets\images\partner\12.png" alt="Salmonation Partner" width="auto">
+          <br>
+        </div>
+        <div class="icon-partner">
+          <img src="<?php echo base_url(); ?>assets\images\partner\13.png" alt="Salmonation Partner" width="auto">
+          <br>
         </div>
       </div>
-      <div class="col-lg-5 col-md-5 col-sm-12 col-12 d-flex align-items-center order-md-2 order-sm-1 order-1 mb-media-3">
-        <img src="<?php echo base_url(); ?>assets/images/about.svg" alt="" class="img-raw-right">
-      </div>
     </div>
-  </div>
-</section>
-<section id="tokenomic">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 col-md-5 col-sm-12 col-12 d-flex align-items-center order-md-1 order-sm-1 order-1 mb-media-3">
-        <div class="position-relative w-100">
-          <div id="containerchart"></div>
-        </div>
-      </div>
-      <div class="col-lg-7 col-md-7 col-sm-12 col-12 d-flex align-items-center order-md-2 order-sm-1 order-1">
-        <div class="">
+  </section>
+  <section id="tentang-kami">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-md-7 col-sm-12 col-12 d-flex align-items-center order-md-1 order-sm-2 order-2">
           <div class="text-animation mb-2">
             <div class="hd-text">
-              <h3 class="title-border-left-right-bottom text-left">Tokenomic Initial Allocation</h3>
+              <h3 class="title-border-left-right-bottom text-left">Tentang Kami</h3>
               <div class="header-title text-left">
-                SALMON NATION TOKENOMIC
+                SALMON NATION
+              </div>
+              <p>Salmonation memberikan jasa konsultan dan penasihat kepada para pedagang / developer di Indonesia awalnya, untuk menciptakan sebuah keharmonisan tokenomic dalam sebuah project yang dijalankan guna mencapai keberhasilan project. Secara tidak langsung akan  menciptakan sebuah standarisasi tokenomic yang tepat untuk sebuah  project yang dijalankan.</p>
+            </div>
+            <div class="navigation-wrp-1">
+              <div class="inner-wrp">
+                <a href="https://t.me/salmonation" target="_blank" class="nav-link"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://twitter.com/thesalmonation" target="_blank" class="nav-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://salmonchain.com/" target="_blank" class="nav-link"><i class="fas fa-layer-group"></i></a>
               </div>
             </div>
           </div>
-          <div class="benefit-nft row d-flex align-items-center">
-            <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-12 col-12 d-flex align-items-center order-md-2 order-sm-1 order-1 mb-media-3">
+          <img src="<?php echo base_url(); ?>assets/images/about.svg" alt="" class="img-raw-right">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="tokenomic">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-5 col-sm-12 col-12 d-flex align-items-center order-md-1 order-sm-1 order-1 mb-media-3">
+          <div class="position-relative w-100">
+            <div id="containerchart"></div>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-7 col-sm-12 col-12 d-flex align-items-center order-md-2 order-sm-1 order-1">
+          <div class="">
+            <div class="text-animation mb-2">
+              <div class="hd-text">
+                <h3 class="title-border-left-right-bottom text-left">Tokenomic Initial Allocation</h3>
+                <div class="header-title text-left">
+                  SALMON NATION TOKENOMIC
+                </div>
+              </div>
+            </div>
+            <div class="benefit-nft row d-flex align-items-center">
+              <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+                <div class="icon-community">
+                  <i class="fas fa-database"></i>
+                </div>
+              </div>
+              <div class="col-lg-10 col-md-9 col-sm-9 col-9">
+                <p>Total supply     : 100.000.000 $SUI</p>
+              </div>
+            </div>
+            <div class="benefit-nft row d-flex align-items-center">
+              <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+                <div class="icon-community">
+                  <i class="fas fa-lock"></i>
+                </div>
+              </div>
+              <div class="col-lg-10 col-md-9 col-sm-9 col-9">
+                <p>Liquidity Pool   : 90.000.000 $SUI</p>
+              </div>
+            </div>
+            <div class="benefit-nft row d-flex align-items-center">
+              <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+                <div class="icon-community">
+                  <i class="fas fa-users"></i>
+                </div>
+              </div>
+              <div class="col-lg-10 col-md-9 col-sm-9 col-9">
+                <p>Team     : 2.000.000 $SUI</p>
+              </div>
+            </div>
+            <div class="benefit-nft row d-flex align-items-center">
+              <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+                <div class="icon-community">
+                  <i class="fas fa-bullhorn"></i>
+                </div>
+              </div>
+              <div class="col-lg-10 col-md-9 col-sm-9 col-9">
+                <p>Marketing    : 4.000.000 $SUI</p>
+              </div>
+            </div>
+            <div class="benefit-nft row d-flex align-items-center">
+              <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+                <div class="icon-community">
+                  <i class="fas fa-laptop"></i>
+                </div>
+              </div>
+              <div class="col-lg-10 col-md-9 col-sm-9 col-9">
+                <p>Development    : 4.000.000 $SUI</p>
+              </div>
+            </div>
+            <div class="benefit-nft row d-flex align-items-center">
+              <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+                <div class="icon-community">
+                  <i class="fas fa-dollar-sign"></i>
+                </div>
+              </div>
+              <div class="col-lg-10 col-md-9 col-sm-9 col-9">
+                <p>Reflection(9%) <br> Marketing : 3%, Development   : 3%, Main Pool   : 3%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="ecosystem">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+          <h3 class="title-border-left-right-bottom text-left">Ecosystem</h3>
+          <div class="header-title text-left">
+            SALMON NATION ECOSYSTEM
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
+          <div class="blog-box video-box">
+            <div class="blog-text video-text pt-4">
+              <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-3.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
+              <h3 class="h3-title"><a href="javascript:void(0)">DEFI</a></h3>
+              <p class="text-ecosystem">Sistem keuangan terpusat hingga keuangan peer-to-peer diaktifkan oleh teknologi yang terdesentralisasi yang dibangun di atas blockchain.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
+          <div class="blog-box video-box">
+            <div class="blog-text video-text pt-4">
+              <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-2.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
+              <h3 class="h3-title"><a href="javascript:void(0)">GAMEFI</a></h3>
+              <p class="text-ecosystem">Sistem yang menggabungkan keuangan terdesentralisasi (DeFi) dan Non Fungiable token (NFT) dengan game online berbasis blockchain.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
+          <div class="blog-box video-box">
+            <div class="blog-text video-text pt-4">
+              <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-4.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
+              <h3 class="h3-title"><a href="javascript:void(0)">MEME</a></h3>
+              <p class="text-ecosystem">Mata uang cryptocurrency yang berasal dari Meme Internet atau memiliki karakteristik lucu lainnya berbasis blockchain. Kekuatan Meme coin ini adalah komunitas. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
+          <div class="blog-box video-box">
+            <div class="blog-text video-text pt-4">
+              <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-1.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
+              <h3 class="h3-title"><a href="javascript:void(0)">DAO</a></h3>
+              <p class="text-ecosystem">Merupakan suatu perusahaan atau organisasi yang dijalankan oleh sistem yang terdapat pada program komputer, semua keputusan dikontrol oleh pemegang saham bukan dari pusat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
+          <div class="blog-box video-box">
+            <div class="blog-text video-text pt-4">
+              <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-5.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
+              <h3 class="h3-title"><a href="javascript:void(0)">NFT</a></h3>
+              <p class="text-ecosystem">Salah satu aset digital yang tengah naik daun. Aset ini banyak dipakai oleh para seniman atau content creator untuk menjual karya-karya mereka.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="service">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+          <h3 class="title-border-left-right-bottom">Our Service</h3>
+          <div class="header-title">
+            SERVICES
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
+          <div class="blog-box video-box">
+            <div class="blog-text video-text pt-4">
               <div class="icon-community">
-                <i class="fas fa-database"></i>
+                <i class="fas fa-cubes"></i>
               </div>
-            </div>
-            <div class="col-lg-10 col-md-9 col-sm-9 col-9">
-            <p>Total supply     : 100.000.000 $SUI</p>
+              <h3 class="h3-title h3-service"><a href="javascript:void(0)">Konsultasi Tokenomic Crypto</a></h3>
+              <p class="text-ecosystem">Dengan memiliki pengalaman di dunia crypto yang kami miliki serta juga analisa crypto selama 3 tahun. Salmonation hadir untuk membantu para Developer bisa menjalankan projek dan juga memiliki tokenomic yang sesuai dengen projek meraka.</p>
             </div>
           </div>
-          <div class="benefit-nft row d-flex align-items-center">
-            <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
+          <div class="blog-box video-box">
+            <div class="blog-text video-text pt-4">
               <div class="icon-community">
-                <i class="fas fa-lock"></i>
+                <i class="fas fa-briefcase"></i>
               </div>
-            </div>
-            <div class="col-lg-10 col-md-9 col-sm-9 col-9">
-            <p>Liquidity Pool   : 90.000.000 $SUI</p>
+              <h3 class="h3-title h3-service"><a href="javascript:void(0)">Pembuatan Apps & Smart Contract</a></h3>
+              <p class="text-ecosystem">Salmonation akan berkembang dengan memiliki beberapa partner Developer untuk bisa membantu ekosistem yang akan dibentuk. Partner Developer akan di sertifikasi oleh Salmonation untuk validasi terkait pembuatan projek Crypto.</p>
             </div>
           </div>
-          <div class="benefit-nft row d-flex align-items-center">
-            <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
+          <div class="blog-box video-box">
+            <div class="blog-text video-text pt-4">
               <div class="icon-community">
                 <i class="fas fa-users"></i>
               </div>
-            </div>
-            <div class="col-lg-10 col-md-9 col-sm-9 col-9">
-            <p>Team     : 2.000.000 $SUI</p>
+              <h3 class="h3-title h3-service"><a href="javascript:void(0)">Pengembangan Komunitas Crypto</a></h3>
+              <p class="text-ecosystem">Dengan jaringan komunitas yang Salmonation miliki, kami akan membantu projek Anda bisa tersampaikan kepada investor yang tepat serta dapat membangun komunikasi yang tepat.</p>
             </div>
           </div>
-          <div class="benefit-nft row d-flex align-items-center">
-            <div class="col-lg-2 col-md-3 col-sm-3 col-3">
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
+          <div class="blog-box video-box">
+            <div class="blog-text video-text pt-4">
               <div class="icon-community">
                 <i class="fas fa-bullhorn"></i>
               </div>
-            </div>
-            <div class="col-lg-10 col-md-9 col-sm-9 col-9">
-            <p>Marketing    : 4.000.000 $SUI</p>
-            </div>
-          </div>
-          <div class="benefit-nft row d-flex align-items-center">
-            <div class="col-lg-2 col-md-3 col-sm-3 col-3">
-              <div class="icon-community">
-                <i class="fas fa-laptop"></i>
-              </div>
-            </div>
-            <div class="col-lg-10 col-md-9 col-sm-9 col-9">
-            <p>Development    : 4.000.000 $SUI</p>
-            </div>
-          </div>
-          <div class="benefit-nft row d-flex align-items-center">
-            <div class="col-lg-2 col-md-3 col-sm-3 col-3">
-              <div class="icon-community">
-                <i class="fas fa-dollar-sign"></i>
-              </div>
-            </div>
-            <div class="col-lg-10 col-md-9 col-sm-9 col-9">
-            <p>Reflection(10%) <br> Marketing : 3%, Development   : 4%, Main Pool   : 3%</p>
+              <h3 class="h3-title h3-service"><a href="javascript:void(0)">Pemasaran Iklan Digital</a></h3>
+              <p class="text-ecosystem">Salmonation akan membantu menaikkan trafik pada website Anda dan juga akan membantu menyebar luaskan dalam berbagai platform iklan crypto serta juga platform Google, Instagram & Twitter.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section id="ecosystem">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-        <h3 class="title-border-left-right-bottom text-left">Ecosystem</h3>
-        <div class="header-title text-left">
-          SALMON NATION ECOSYSTEM
+  </section>
+  <section id="nft">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-sm-12 col-12 d-flex align-items-center mb-media-3">
+          <img src="<?php echo base_url(); ?>assets/images/nft.png" alt="" class="img-raw-right">
         </div>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
-        <div class="blog-box video-box">
-          <div class="blog-text video-text pt-4">
-            <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-3.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
-            <h3 class="h3-title"><a href="javascript:void(0)">DEFI</a></h3>
-            <p class="text-ecosystem">Sistem keuangan terpusat hingga keuangan peer-to-peer diaktifkan oleh teknologi yang terdesentralisasi yang dibangun di atas blockchain.</p>
+        <div class="col-lg-7 col-sm-12 col-12">
+          <h3 class="title-border-left-right-bottom text-left">Non Fungible Token</h3>
+          <div class="header-title text-left">
+            NFT SALMONATION
           </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
-        <div class="blog-box video-box">
-          <div class="blog-text video-text pt-4">
-            <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-2.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
-            <h3 class="h3-title"><a href="javascript:void(0)">GAMEFI</a></h3>
-            <p class="text-ecosystem">Sistem yang menggabungkan keuangan terdesentralisasi (DeFi) dan Non Fungiable token (NFT) dengan game online berbasis blockchain.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
-        <div class="blog-box video-box">
-          <div class="blog-text video-text pt-4">
-            <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-4.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
-            <h3 class="h3-title"><a href="javascript:void(0)">MEME</a></h3>
-            <p class="text-ecosystem">Mata uang cryptocurrency yang berasal dari Meme Internet atau memiliki karakteristik lucu lainnya berbasis blockchain. Kekuatan Meme coin ini adalah komunitas. </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
-        <div class="blog-box video-box">
-          <div class="blog-text video-text pt-4">
-            <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-1.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
-            <h3 class="h3-title"><a href="javascript:void(0)">DAO</a></h3>
-            <p class="text-ecosystem">Merupakan suatu perusahaan atau organisasi yang dijalankan oleh sistem yang terdapat pada program komputer, semua keputusan dikontrol oleh pemegang saham bukan dari pusat.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
-        <div class="blog-box video-box">
-          <div class="blog-text video-text pt-4">
-            <img src="<?php echo base_url(); ?>assets/images/ecosystem/ecosystem-5.png" alt="" width="100px" class="img-fluid mb-4 img-ecosystem">
-            <h3 class="h3-title"><a href="javascript:void(0)">NFT</a></h3>
-            <p class="text-ecosystem">Salah satu aset digital yang tengah naik daun. Aset ini banyak dipakai oleh para seniman atau content creator untuk menjual karya-karya mereka.</p>
+          <div class="nft-content">
+            <h4 class="mb-4">1000 NFT @ 2 BNB</h4>
+            <p>Target pengumpulan liquidity pool sebesar HC = 2000bnb</p>
+            <p>Total NFT dikeluarkan awal = 500 NFT. Seluruh hasil transaksi dialokasikan 100% dalam liquidity
+            pool. Sehingga yang menentukan harga public adalah para investor awal.</p>
+            <p>Bila terjadi kekurangan transaksi NFT. Di bawah 1000bnb maka akan dilakukan re presale NFT.
+              Apabila terjadi pencapaian 1000BNB tetap kelebihan NFT – maka NFT di simpan oleh developer
+            dan akan di keluarkan di tahap berikutnya yang akan ditentukan oleh Developer.</p>
+            <p>*developer berhak mengubah quota dan nilai nft yang akan diterbitkan. Tanpa ada
+            pemberitahuan sebelumnya.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section id="service">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-        <h3 class="title-border-left-right-bottom">Our Service</h3>
-        <div class="header-title">
-          SERVICES
-        </div>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
-        <div class="blog-box video-box">
-          <div class="blog-text video-text pt-4">
-            <div class="icon-community">
-              <i class="fas fa-cubes"></i>
-            </div>
-            <h3 class="h3-title h3-service"><a href="javascript:void(0)">Konsultasi Tokenomic Crypto</a></h3>
-            <p class="text-ecosystem">Dengan memiliki pengalaman di dunia crypto yang kami miliki serta juga analisa crypto selama 3 tahun. Salmonation hadir untuk membantu para Developer bisa menjalankan projek dan juga memiliki tokenomic yang sesuai dengen projek meraka.</p>
+  </section>
+  <section id="presale">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <h3 class="title-border-left-right-bottom">Presale</h3>
+          <div class="header-title">
+            PRESALE SALMON NATION
           </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
-        <div class="blog-box video-box">
-          <div class="blog-text video-text pt-4">
-            <div class="icon-community">
-              <i class="fas fa-briefcase"></i>
-            </div>
-            <h3 class="h3-title h3-service"><a href="javascript:void(0)">Pembuatan Apps & Smart Contract</a></h3>
-            <p class="text-ecosystem">Salmonation akan berkembang dengan memiliki beberapa partner Developer untuk bisa membantu ekosistem yang akan dibentuk. Partner Developer akan di sertifikasi oleh Salmonation untuk validasi terkait pembuatan projek Crypto.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
-        <div class="blog-box video-box">
-          <div class="blog-text video-text pt-4">
-            <div class="icon-community">
-              <i class="fas fa-users"></i>
-            </div>
-            <h3 class="h3-title h3-service"><a href="javascript:void(0)">Pengembangan Komunitas Crypto</a></h3>
-            <p class="text-ecosystem">Dengan jaringan komunitas yang Salmonation miliki, kami akan membantu projek Anda bisa tersampaikan kepada investor yang tepat serta dapat membangun komunikasi yang tepat.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4 d-flex align-items-strecth">
-        <div class="blog-box video-box">
-          <div class="blog-text video-text pt-4">
-            <div class="icon-community">
-              <i class="fas fa-bullhorn"></i>
-            </div>
-            <h3 class="h3-title h3-service"><a href="javascript:void(0)">Pemasaran Iklan Digital</a></h3>
-            <p class="text-ecosystem">Salmonation akan membantu menaikkan trafik pada website Anda dan juga akan membantu menyebar luaskan dalam berbagai platform iklan crypto serta juga platform Google, Instagram & Twitter.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="nft">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 col-sm-12 col-12 d-flex align-items-center mb-media-3">
-        <img src="<?php echo base_url(); ?>assets/images/nft.png" alt="" class="img-raw-right">
-      </div>
-      <div class="col-lg-7 col-sm-12 col-12">
-        <h3 class="title-border-left-right-bottom text-left">Non Fungible Token</h3>
-        <div class="header-title text-left">
-          NFT SALMONATION
-        </div>
-        <div class="nft-content">
-          <h4 class="mb-4">1000 NFT @ 2 BNB</h4>
-          <p>Target pengumpulan liquidity pool sebesar HC = 2000bnb</p>
-          <p>Total NFT dikeluarkan awal = 500 NFT. Seluruh hasil transaksi dialokasikan 100% dalam liquidity
-          pool. Sehingga yang menentukan harga public adalah para investor awal.</p>
-          <p>Bila terjadi kekurangan transaksi NFT. Di bawah 1000bnb maka akan dilakukan re presale NFT.
-          Apabila terjadi pencapaian 1000BNB tetap kelebihan NFT – maka NFT di simpan oleh developer
-          dan akan di keluarkan di tahap berikutnya yang akan ditentukan oleh Developer.</p>
-          <p>*developer berhak mengubah quota dan nilai nft yang akan diterbitkan. Tanpa ada
-          pemberitahuan sebelumnya.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="presale">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-12">
-        <h3 class="title-border-left-right-bottom">Presale</h3>
-        <div class="header-title">
-          PRESALE SALMON NATION
-        </div>
         <!-- <div id="countdown">
           <div class="clock_in"><span id="d">S</span>Days</div>
           <div class="clock_in"><span id="d">S</span></div>
@@ -727,4 +727,31 @@
           </div>
         </div>
       </div>
-      <?php } } ?>
+    <?php } } ?>
+
+    <div class="modal fade" id="telemodal">
+      <div class="modal-dialog modal-dialog-centered modal-ama modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="p-4 text-center">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12 order-lg-2 order-md-2 order-ms-2 order-1 d-flex align-items-center">
+                  <img src="<?php echo base_url(); ?>assets/images/join-tele.png" class="img-fluid">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12 order-lg-1 order-md-1 order-ms-1 order-2 d-flex align-items-center">
+                  <div class="w-100">
+                    <img src="<?php echo base_url(); ?>assets/images/salmon.svg" class="mb-3" style="width: 200px">
+                    <h6 class="mb-3" style="line-height: 25px;">Salmonation is the 1st tokenomic using NFT ownership for liquidity pool , that will give stability for initial public price . </h6>
+                    <h6 class="mb-4" style="line-height: 25px;">We also develop defi blockchain as space for ecosystem for the world.</h6>
+                    <a href="https://t.me/salmonation" target="_blank" class="btn-gradient-orange mt-2">JOIN TELEGRAM NOW!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
