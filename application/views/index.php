@@ -27,6 +27,7 @@
                       </div>
                     </div>
                     <p class="second-text">SALMON UNTUK INDONESIA</p>
+                    <a href="<?php echo base_url(); ?>file/NIB & KBLI SALMONATION.pdf" target="_blank" class="btn btn-glass mt-2">Salmonation Legal Statement</a>
                   </div>
                 </div>
               </div>
@@ -728,6 +729,17 @@
         </div>
       </div>
     <?php } } ?>
+    <section id="disclaimer" class="pt-3 pb-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="text-center text-muted">
+              Disclaimer:<br><span style="font-size: 13px;">Untuk membeli,menjual atau menahan investasi apapun setiap investasi dan pergerakan perdagangan asset kripto, harus dilakukan dengan bijak dan memahami fundamental.Setiap asset kripto  berisiko  tinggi,Anda tentukan analisa ektra dan pertimbangan matang sebelum mengambil suatu keputusan pada setiap transaksi asset kripto .</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div class="modal fade" id="telemodal">
       <div class="modal-dialog modal-dialog-centered modal-ama modal-lg">
@@ -747,7 +759,7 @@
                     <h6 class="mb-3" style="line-height: 25px;">Salmonation is the 1st tokenomic using NFT ownership for liquidity pool , that will give stability for initial public price . </h6>
                     <h6 class="mb-4" style="line-height: 25px;">We also develop defi blockchain as space for ecosystem for the world.</h6>
                     <a href="https://t.me/salmonation" target="_blank" class="btn-gradient-orange mt-2">JOIN TELEGRAM NOW!</a>
-                    <a href="https://docs.google.com/spreadsheets/d/1mzG8FMtZcYhnNFqgbi4wnNbCKprQ-5SbK4Y8BEBsw3A/edit#gid=0" target="_blank" class="btn-gradient-blue mt-2">WAITLIST SALMONATION</a>
+                    <a href="https://docs.google.com/spreadsheets/d/1mzG8FMtZcYhnNFqgbi4wnNbCKprQ-5SbK4Y8BEBsw3A/edit#gid=0" target="_blank" class="btn-gradient-blue mt-2">WAITLIST NFT PRESALE</a>
                   </div>
                 </div>
               </div>
