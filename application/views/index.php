@@ -747,6 +747,7 @@
                     <h6 class="mb-3" style="line-height: 25px;">Salmonation is the 1st tokenomic using NFT ownership for liquidity pool , that will give stability for initial public price . </h6>
                     <h6 class="mb-4" style="line-height: 25px;">We also develop defi blockchain as space for ecosystem for the world.</h6>
                     <a href="https://t.me/salmonation" target="_blank" class="btn-gradient-orange mt-2">JOIN TELEGRAM NOW!</a>
+                    <a href="https://docs.google.com/spreadsheets/d/1mzG8FMtZcYhnNFqgbi4wnNbCKprQ-5SbK4Y8BEBsw3A/edit#gid=0" target="_blank" class="btn-gradient-blue mt-2">WAITLIST SALMONATION</a>
                   </div>
                 </div>
               </div>
